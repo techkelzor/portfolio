@@ -116,26 +116,28 @@
   <!-- NAVIGATION HEADER -->
   <header
     class="fixed top-0 left-0 right-0 z-50 w-full bg-white/95 backdrop-blur-md border-b border-outline-variant transition-all">
-    <div class="h-20 max-w-7xl mx-auto px-6 lg:px-21 flex items-center justify-between">
-      <!-- <div class="flex items-center gap-3">
-        <a href="#" class="flex flex-col group">
+    <div class="h-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+      <!-- Brand Logo / Name -->
+      <!-- <div class="flex items-center gap-3"> -->
+      <!-- <a href="#" class="flex flex-col group">
           <span
-            class="font-display font-black text-[1.05rem] text-primary uppercase tracking-wider group-hover:text-accent-gold transition-colors">
+            class="font-display font-black text-sm sm:text-[1.05rem] text-primary uppercase tracking-wider group-hover:text-accent-gold transition-colors">
             Bidyawant Pradhan
           </span>
-          <span class="font-mono text-[0.625rem] text-outline uppercase tracking-widest">
+          <span class="font-mono text-[0.55rem] sm:text-[0.625rem] text-outline uppercase tracking-widest">
             Creative Producer &amp; Director
           </span>
-        </a>
-      </div> -->
+        </a> -->
+      <!-- </div> -->
 
-      <!-- Dynamically Mapped Navigation Links -->
-      <nav id="navLinks" class="hidden md:flex items-center gap-7 lg:gap-9">
+      <!-- Dynamically Mapped Desktop Navigation Links -->
+      <nav id="navLinks" class="hidden md:flex items-center gap-6 lg:gap-8">
         <!-- Rendered via portfolioData.navigation.map -->
       </nav>
 
-      <div class="flex items-center gap-3">
-        <a class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 font-display font-bold text-[0.75rem] uppercase tracking-[0.15em] bg-primary text-white hover:bg-neutral-800 transition-all duration-200 gap-2 border border-primary hover:border-neutral-800 shadow-sm"
+      <!-- Right Header Actions -->
+      <div class="flex items-center gap-2 sm:gap-3">
+        <a class="hidden sm:inline-flex items-center justify-center px-4 sm:px-5 py-2 sm:py-2.5 font-display font-bold text-[0.725rem] sm:text-[0.75rem] uppercase tracking-[0.15em] bg-primary text-white hover:bg-neutral-800 transition-all duration-200 gap-2 border border-primary hover:border-neutral-800 shadow-sm"
           href="mailto:sovbidrahul@gmail.com">
           <span>Connect</span>
           <svg class="w-3.5 h-3.5 text-accent-gold" fill="none" stroke="currentColor" stroke-width="2"
@@ -143,9 +145,52 @@
             <path d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
           </svg>
         </a>
+
+        <!-- Mobile Hamburger Menu Button -->
+        <button id="mobileMenuBtn" type="button" aria-label="Toggle Navigation Menu" aria-expanded="false"
+          class="md:hidden inline-flex items-center justify-center w-10 h-10 text-primary hover:text-accent-gold hover:bg-neutral-100 border border-outline-variant transition-colors focus:outline-none">
+          <!-- Hamburger Icon (3 bars) -->
+          <svg id="hamburgerIcon" class="w-5 h-5 block" fill="none" stroke="currentColor" stroke-width="2"
+            viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+          <!-- Close Icon (X) -->
+          <svg id="closeIcon" class="w-5 h-5 hidden" fill="none" stroke="currentColor" stroke-width="2"
+            viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
       </div>
     </div>
   </header>
+
+  <!-- MOBILE NAVIGATION DRAWER & BACKDROP -->
+  <div id="mobileMenu"
+    class="md:hidden fixed inset-x-0 top-20 bg-white/98 backdrop-blur-xl border-b border-outline-variant shadow-2xl transition-all duration-300 ease-in-out -translate-y-[120%] opacity-0 pointer-events-none z-40 max-h-[calc(100vh-5rem)] overflow-y-auto">
+    <div class="px-5 py-6 flex flex-col gap-2 max-w-lg mx-auto">
+
+      <nav id="mobileNavLinks" class="flex flex-col divide-y divide-outline-variant/40">
+        <!-- Dynamically rendered via portfolioData.navigation -->
+      </nav>
+      <div class="pt-4 mt-2 border-t border-outline-variant flex flex-col gap-3">
+        <a class="flex items-center justify-center w-full px-5 py-3 font-display font-bold text-xs uppercase tracking-[0.15em] bg-primary text-white hover:bg-neutral-800 transition-colors gap-2"
+          href="mailto:sovbidrahul@gmail.com">
+          <span>Connect via Email</span>
+          <svg class="w-3.5 h-3.5 text-accent-gold" fill="none" stroke="currentColor" stroke-width="2"
+            viewBox="0 0 24 24">
+            <path d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+          </svg>
+        </a>
+        <div class="flex items-center justify-between text-outline font-mono text-[0.68rem] pt-1">
+          <span>Bangalore &bull; Tokyo &bull; Worldwide</span>
+          <a href="tel:+917004272985" class="hover:text-primary transition-colors">+91 70042 72985</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="mobileBackdrop"
+    class="md:hidden fixed inset-0 bg-black/50 backdrop-blur-sm z-30 transition-opacity duration-300 opacity-0 pointer-events-none">
+  </div>
 
   <main class="w-full pt-20 bg-surface min-h-screen">
     <div class="flex flex-col w-full text-on-surface">
@@ -459,12 +504,27 @@
         return;
       }
 
-      // Render Navigation Links
+      // Render Navigation Links (Desktop)
       const navEl = document.getElementById('navLinks');
       if (navEl && portfolioData.navigation) {
         navEl.innerHTML = portfolioData.navigation.map(item => `
           <a class="relative font-display font-bold text-[0.825rem] lg:text-[0.875rem] uppercase tracking-[0.14em] text-neutral-600 hover:text-primary transition-all duration-200 py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-accent-gold hover:after:w-full after:transition-all after:duration-300"
             href="${item.href}">${item.label}</a>
+        `).join('');
+      }
+
+      // Render Navigation Links (Mobile Drawer)
+      const mobileNavEl = document.getElementById('mobileNavLinks');
+      if (mobileNavEl && portfolioData.navigation) {
+        mobileNavEl.innerHTML = portfolioData.navigation.map((item, index) => `
+          <a class="mobile-nav-link flex items-center justify-between py-3.5 px-3 text-primary hover:text-accent-gold hover:bg-neutral-500 font-display font-bold text-sm uppercase tracking-wider transition-all"
+            href="${item.href}">
+            <span class="flex items-center gap-3">
+             
+              <span>${item.label}</span>
+            </span>
+           
+          </a>
         `).join('');
       }
 
@@ -822,7 +882,78 @@
     });
 
     // -------------------------------------------------------------
-    // 3. INITIALIZATION & GSAP ANIMATIONS
+    // 3. MOBILE HAMBURGER MENU CONTROLLER
+    // -------------------------------------------------------------
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const mobileBackdrop = document.getElementById('mobileBackdrop');
+    const hamburgerIcon = document.getElementById('hamburgerIcon');
+    const closeIcon = document.getElementById('closeIcon');
+
+    function openMobileMenu() {
+      if (!mobileMenu || !mobileBackdrop) return;
+      mobileMenu.classList.remove('-translate-y-[120%]', 'opacity-0', 'pointer-events-none');
+      mobileMenu.classList.add('translate-y-0', 'opacity-100', 'pointer-events-auto');
+      mobileBackdrop.classList.remove('opacity-0', 'pointer-events-none');
+      mobileBackdrop.classList.add('opacity-100', 'pointer-events-auto');
+      if (hamburgerIcon) hamburgerIcon.classList.add('hidden');
+      if (closeIcon) closeIcon.classList.remove('hidden');
+      if (mobileMenuBtn) mobileMenuBtn.setAttribute('aria-expanded', 'true');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeMobileMenu() {
+      if (!mobileMenu || !mobileBackdrop) return;
+      mobileMenu.classList.add('-translate-y-[120%]', 'opacity-0', 'pointer-events-none');
+      mobileMenu.classList.remove('translate-y-0', 'opacity-100', 'pointer-events-auto');
+      mobileBackdrop.classList.add('opacity-0', 'pointer-events-none');
+      mobileBackdrop.classList.remove('opacity-100', 'pointer-events-auto');
+      if (hamburgerIcon) hamburgerIcon.classList.remove('hidden');
+      if (closeIcon) closeIcon.classList.add('hidden');
+      if (mobileMenuBtn) mobileMenuBtn.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = 'auto';
+    }
+
+    function toggleMobileMenu() {
+      const isOpen = mobileMenu && !mobileMenu.classList.contains('-translate-y-[120%]');
+      if (isOpen) {
+        closeMobileMenu();
+      } else {
+        openMobileMenu();
+      }
+    }
+
+    if (mobileMenuBtn) {
+      mobileMenuBtn.addEventListener('click', toggleMobileMenu);
+    }
+
+    if (mobileBackdrop) {
+      mobileBackdrop.addEventListener('click', closeMobileMenu);
+    }
+
+    // Close mobile menu on clicking any navigation link
+    document.addEventListener('click', (e) => {
+      if (e.target.closest('.mobile-nav-link')) {
+        closeMobileMenu();
+      }
+    });
+
+    // Close on escape key if mobile menu is open
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && mobileMenu && !mobileMenu.classList.contains('-translate-y-[120%]')) {
+        closeMobileMenu();
+      }
+    });
+
+    // Close automatically when resized to desktop breakpoint (>= 768px)
+    window.addEventListener('resize', () => {
+      if (window.innerWidth >= 768 && mobileMenu && !mobileMenu.classList.contains('-translate-y-[120%]')) {
+        closeMobileMenu();
+      }
+    });
+
+    // -------------------------------------------------------------
+    // 4. INITIALIZATION & GSAP ANIMATIONS
     // -------------------------------------------------------------
     document.addEventListener('DOMContentLoaded', () => {
       // Step 1: Render All Portfolio Data from portfolioData object map
