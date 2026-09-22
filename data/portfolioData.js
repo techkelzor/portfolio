@@ -17,7 +17,7 @@ const portfolioData = {
       { label: "12+ YEARS EXP", icon: "★", highlight: true },
       { value: "40+", label: "PROJECTS", highlight: false },
       { value: "26", label: "COUNTRIES", highlight: false },
-      { value: "7", label: "FEATURE FILMS", highlight: false }
+      { value: "8", label: "FEATURE FILMS", highlight: true }
     ]
   },
 
