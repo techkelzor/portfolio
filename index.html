@@ -5,7 +5,10 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="web_standard" name="shell-type">
-  <title>Bidyawant Pradhan — Creative Producer & Creative Director</title>
+  <title>Bidyawant Pradhan — Creative Producer &amp; Director | Film BTS, Commercials, AI</title>
+  <meta name="description"
+    content="Portfolio of Bidyawant Pradhan — Creative Producer &amp; Creative Director with 12+ years experience across 7 feature films (Raid, Bhuj, Mard Ko Dard Nahi Hota), Tokyo corporate directorship, brand commercials (L'Oréal, Croma, Fevicol, Tanishq), and AI pipelines.">
+
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
     rel="stylesheet">
   <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -13,6 +16,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Outfit:wght@400;500;600;700;800;900&amp;family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&amp;family=Space+Mono:wght@400;700&amp;display=swap"
     rel="stylesheet">
+
   <style>
     @layer base {
 
@@ -29,18 +33,40 @@
     }
 
     ::-webkit-scrollbar {
-      display: none;
+      width: 6px;
+      height: 6px;
     }
 
-    /* Custom CSS Reveal Utilities */
-    .hero-title-part {
-      display: block;
+    ::-webkit-scrollbar-track {
+      background: #FAFAFA;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #D4D4D8;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #A1A1AA;
+    }
+
+    .rounded-full {
+      border-radius: 9999px !important;
     }
 
     .clip-path-reveal {
       clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     }
+
+    .video-card-hover {
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease;
+    }
+
+    .video-card-hover:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    }
   </style>
+
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
   <script id="tailwind-config">
     tailwind.config = {
@@ -58,7 +84,8 @@
             "on-surface-variant": "#52525B",
             "outline": "#71717A",
             "outline-variant": "#E4E4E7",
-            "accent-gold": "#9E7818"
+            "accent-gold": "#B8860B",
+            "accent-gold-light": "#FFF8E7"
           },
           fontFamily: {
             "sans": ["Plus Jakarta Sans", "sans-serif"],
@@ -70,7 +97,7 @@
             "DEFAULT": "0px",
             "lg": "0px",
             "xl": "0px",
-            "full": "0px"
+            "full": "9999px"
           }
         }
       }
@@ -85,35 +112,44 @@
   class="bg-surface font-sans text-on-surface antialiased selection:bg-black selection:text-white overflow-x-hidden">
 
   <!-- NAVIGATION HEADER -->
-  <header class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-outline-variant">
-    <div class="h-20 max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between">
-      <div class="flex items-center gap-4">
-
-        <div class="flex flex-col">
-          <span class="font-display font-extrabold text-[1rem] text-primary uppercase tracking-wider">Bidyawant
-            Pradhan</span>
-          <span class="font-mono text-[0.65rem] text-outline uppercase tracking-widest">Creative Producer &amp;
-            Director</span>
-        </div>
+  <header
+    class="fixed top-0 left-0 right-0 z-50 w-full bg-white/95 backdrop-blur-md border-b border-outline-variant transition-all">
+    <div class="h-20 w-full mx-auto px-6 lg:px-21 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <a href="#" class="flex flex-col group">
+          <span
+            class="font-display font-black text-[1.05rem] text-primary uppercase tracking-wider group-hover:text-accent-gold transition-colors">
+            Bidyawant Pradhan
+          </span>
+          <span class="font-mono text-[0.625rem] text-outline uppercase tracking-widest">
+            Creative Producer &amp; Director
+          </span>
+        </a>
       </div>
-      <nav class="hidden lg:flex items-center gap-8">
-        <a class="font-mono text-[0.75rem] uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors"
-          href="#works">Commercials</a>
-        <a class="font-mono text-[0.75rem] uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors"
-          href="#ai-works">AI Work</a>
-        <a class="font-mono text-[0.75rem] uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors"
+
+      <nav class="hidden md:flex items-center gap-7 lg:gap-9">
+        <a class="relative font-display font-bold text-[0.825rem] lg:text-[0.875rem] uppercase tracking-[0.14em] text-neutral-600 hover:text-primary transition-all duration-200 py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-accent-gold hover:after:w-full after:transition-all after:duration-300"
+          href="#spotlight">Tokyo &amp; Series</a>
+        <a class="relative font-display font-bold text-[0.825rem] lg:text-[0.875rem] uppercase tracking-[0.14em] text-neutral-600 hover:text-primary transition-all duration-200 py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-accent-gold hover:after:w-full after:transition-all after:duration-300"
           href="#films">Film BTS</a>
-        <a class="font-mono text-[0.75rem] uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors"
-          href="#posters">Posters</a>
-        <a class="font-mono text-[0.75rem] uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors"
-          href="#credits">Filmography</a>
-        <a class="font-mono text-[0.75rem] uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors"
-          href="#contact">Contact</a>
+        <a class="relative font-display font-bold text-[0.825rem] lg:text-[0.875rem] uppercase tracking-[0.14em] text-neutral-600 hover:text-primary transition-all duration-200 py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-accent-gold hover:after:w-full after:transition-all after:duration-300"
+          href="#commercials">Brand Ads</a>
+        <a class="relative font-display font-bold text-[0.825rem] lg:text-[0.875rem] uppercase tracking-[0.14em] text-neutral-600 hover:text-primary transition-all duration-200 py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-accent-gold hover:after:w-full after:transition-all after:duration-300"
+          href="#ai-works">AI Work</a>
+        <a class="relative font-display font-bold text-[0.825rem] lg:text-[0.875rem] uppercase tracking-[0.14em] text-neutral-600 hover:text-primary transition-all duration-200 py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-accent-gold hover:after:w-full after:transition-all after:duration-300"
+          href="#posters">Key Art</a>
+        <a class="relative font-display font-bold text-[0.825rem] lg:text-[0.875rem] uppercase tracking-[0.14em] text-neutral-600 hover:text-primary transition-all duration-200 py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-accent-gold hover:after:w-full after:transition-all after:duration-300"
+          href="#filmography">Filmography</a>
       </nav>
-      <div class="flex items-center gap-4">
-        <a class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 font-mono text-[0.75rem] uppercase tracking-widest bg-primary text-white hover:bg-neutral-800 transition-colors"
+
+      <div class="flex items-center gap-3">
+        <a class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 font-display font-bold text-[0.75rem] uppercase tracking-[0.15em] bg-primary text-white hover:bg-neutral-800 transition-all duration-200 gap-2 border border-primary hover:border-neutral-800 shadow-sm"
           href="mailto:sovbidrahul@gmail.com">
-          Connect
+          <span>Connect</span>
+          <svg class="w-3.5 h-3.5 text-accent-gold" fill="none" stroke="currentColor" stroke-width="2"
+            viewBox="0 0 24 24">
+            <path d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+          </svg>
         </a>
       </div>
     </div>
@@ -122,20 +158,18 @@
   <main class="w-full pt-20 bg-surface min-h-screen">
     <div class="flex flex-col w-full text-on-surface">
 
-      <!-- HERO SECTION WITH REVEAL ANIMATIONS, SVGS & CURSIVE TYPOGRAPHY -->
+      <!-- HERO SECTION -->
       <section
-        class="relative w-full px-6 lg:px-12 pt-20 pb-20 bg-surface flex flex-col items-center justify-center text-center overflow-hidden min-h-[85vh]">
+        class="relative w-full px-6 lg:px-12 pt-16 pb-20 bg-surface flex flex-col items-center justify-center text-center overflow-hidden min-h-[85vh]">
         <!-- BACKGROUND CAMERA APERTURE & FOCUS RETICLE SVG -->
         <div
-          class="absolute inset-0 flex items-center justify-center pointer-events-none opacity-[0.08] hero-aperture z-0">
-          <svg class="w-[650px] h-[650px] sm:w-[850px] sm:h-[850px] text-primary hero-aperture-ring" fill="none"
+          class="absolute inset-0 flex items-center justify-center pointer-events-none opacity-[0.06] hero-aperture z-0">
+          <svg class="w-[650px] h-[650px] sm:w-[900px] sm:h-[900px] text-primary hero-aperture-ring" fill="none"
             stroke="currentColor" stroke-width="1" viewBox="0 0 500 500">
-            <!-- Concentric Aperture Lens Rings -->
             <circle cx="250" cy="250" r="230" stroke-dasharray="8 4"></circle>
             <circle cx="250" cy="250" r="180"></circle>
             <circle cx="250" cy="250" r="120" stroke-dasharray="12 6"></circle>
             <circle cx="250" cy="250" r="60"></circle>
-            <!-- Aperture Shutter Blades -->
             <line stroke-width="1.5" x1="250" x2="370" y1="70" y2="190"></line>
             <line stroke-width="1.5" x1="430" x2="310" y1="250" y2="370"></line>
             <line stroke-width="1.5" x1="250" x2="130" y1="430" y2="310"></line>
@@ -145,14 +179,13 @@
           </svg>
         </div>
 
-        <!-- VIEWFINDER FRAME CORNER MARKERS & CROSSHAIR SVGS -->
+        <!-- VIEWFINDER FRAME CORNER MARKERS -->
         <div
-          class="absolute inset-x-8 inset-y-12 pointer-events-none hidden sm:flex flex-col justify-between z-0 opacity-40">
+          class="absolute inset-x-8 inset-y-12 pointer-events-none hidden sm:flex flex-col justify-between z-0 opacity-30">
           <div class="flex justify-between items-center">
             <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
               <path d="M4 10V4h6"></path>
             </svg>
-
             <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
               <path d="M20 10V4h-6"></path>
             </svg>
@@ -167,274 +200,1022 @@
           </div>
         </div>
 
-        <!-- HERO CONTENT CONTAINER -->
+        <!-- HERO CONTENT -->
         <div class="max-w-4xl mx-auto flex flex-col items-center text-center z-10 relative">
-          <!-- Kicker Ribbon Badge -->
-
+          <!-- Tokyo / Global Credential Ribbon -->
+          <div
+            class="inline-flex items-center gap-2 px-4 py-1.5 bg-neutral-900 text-white font-mono text-[0.65rem] tracking-[0.2em] uppercase mb-4 hero-badge shadow-sm">
+            <span class="w-2 h-2 rounded-full bg-accent-gold animate-pulse"></span>
+            <span>4 Yrs Tokyo Corporate • 40+ Global Projects • 7 Feature Films</span>
+          </div>
 
           <!-- Main Headline with GSAP Reveal -->
           <h1
-            class="font-display text-[3.5rem] sm:text-[5.5rem] lg:text-[6.5rem] uppercase tracking-[-0.04em] text-primary leading-[0.92] font-black m-0">
+            class="font-display text-[3.25rem] sm:text-[5.5rem] lg:text-[6.25rem] uppercase tracking-[-0.04em] text-primary leading-[0.9] font-black m-0">
             <span class="hero-title-part">BIDYAWANT</span>
             <span class="hero-title-part text-primary">PRADHAN</span>
           </h1>
 
           <!-- Cursive Accent Subtitle -->
-          <span
-            class="font-cursive italic font-normal text-accent-gold text-[2.25rem] sm:text-[3.5rem] lg:text-[4rem] tracking-normal block my-1 hero-cursive">
-            Art of Cinema &amp; Generative Media
-          </span>
+          <!-- <span class="font-cursive italic font-normal text-accent-gold text-[2.25rem] sm:text-[3.5rem] lg:text-[4rem] tracking-normal block my-1 hero-cursive">
+            Cinema Direction, BTS, Commercials &amp; AI
+          </span> -->
 
           <!-- Secondary Display Line -->
           <div
-            class="font-display text-[1.125rem] sm:text-[1.65rem] uppercase tracking-[0.05em] text-outline mt-1 font-semibold hero-title-part">
-            CREATIVE PRODUCER &amp; CREATIVE DIRECTOR
+            class="font-display text-[1rem] sm:text-[1.35rem] uppercase tracking-[0.1em] text-outline mt-1 font-semibold hero-title-part">
+            CREATIVE PRODUCER &bull; CREATIVE DIRECTOR &bull; BTS DIRECTOR
           </div>
 
-          <!-- Stats Strip Bar -->
+          <!-- Quick Summary Statement -->
+          <p class="max-w-2xl text-[0.875rem] sm:text-[0.95rem] text-on-surface-variant font-sans mt-4 leading-relaxed">
+            12+ years spanning theatrical feature film BTS (<span class="text-primary font-semibold">Raid, Bhuj, Mard Ko
+              Dard Nahi Hota</span>), Tokyo corporate direction (<span class="text-primary font-semibold">Matrix
+              Inc.</span>), national brand ad films (<span class="text-primary font-semibold">L'Oréal, Croma, Fevicol,
+              Tanishq</span>), and OTT series production (<span class="text-primary font-semibold">Singlehood</span>).
+          </p>
+
+          <!-- Stats Strip Bar (Bold Highlighted Display Font) -->
           <div
-            class="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 font-mono text-[0.75rem] text-on-surface-variant mt-8 py-3 px-8 border-y border-outline-variant bg-surface-container-low/80 backdrop-blur-sm hero-stats">
-            <span class="text-primary font-bold">12+ Years Exp</span>
-            <span class="text-outline-variant">•</span>
-            <span class="text-primary font-bold">Matrix Inc (Tokyo)</span>
-            <span class="text-outline-variant">•</span>
-            <span class="text-primary font-bold">40+ Projects across 26 Countries</span>
-            <span class="text-outline-variant">•</span>
-            <span class="text-accent-gold font-bold">7 Feature Films</span>
+            class="flex flex-wrap items-center justify-center gap-2.5 sm:gap-3 font-display text-[0.8rem] sm:text-[0.925rem] tracking-wide mt-7 py-3 px-4 sm:px-6 border border-outline-variant bg-white/95 shadow-sm backdrop-blur-md hero-stats">
+            <div
+              class="inline-flex items-center gap-1.5 px-3 py-1 bg-primary text-white font-extrabold uppercase tracking-wider">
+              <span class="text-accent-gold">★</span> 12+ YEARS EXP
+            </div>
+            <div
+              class="inline-flex items-center gap-1.5 px-3 py-1 bg-surface-container text-primary font-black uppercase border border-outline-variant">
+              <span class="text-accent-gold font-black">40+</span> PROJECTS
+            </div>
+            <div
+              class="inline-flex items-center gap-1.5 px-3 py-1 bg-surface-container text-primary font-black uppercase border border-outline-variant">
+              <span class="text-accent-gold font-black">26</span> COUNTRIES
+            </div>
+            <div
+              class="inline-flex items-center gap-1.5 px-3 py-1 bg-surface-container text-primary font-black uppercase border border-outline-variant">
+              <span class="text-accent-gold font-black">7</span> FEATURE FILMS
+            </div>
+            <!-- <div class="inline-flex items-center gap-1.5 px-3.5 py-1 bg-accent-gold text-white font-black uppercase tracking-wider shadow-sm">
+              <span>ZERO BUDGET OVERRUNS</span>
+            </div> -->
           </div>
 
-          <!-- CTA Buttons -->
-          <div class="flex flex-wrap items-center justify-center gap-4 mt-8">
-            <a class="px-8 py-3.5 bg-primary text-white font-mono text-[0.75rem] uppercase tracking-widest hover:bg-neutral-800 transition-colors inline-flex items-center gap-2.5 hero-btn shadow-md"
-              href="#works">
-              <span>EXPLORE SHOWCASE</span>
-              <svg class="w-4 h-4 text-accent-gold" fill="none" stroke="currentColor" stroke-width="2"
-                viewBox="0 0 24 24">
-                <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-              </svg>
-            </a>
-            <a class="px-8 py-3.5 bg-white border border-primary text-primary font-mono text-[0.75rem] uppercase tracking-widest hover:bg-surface-container-low transition-colors inline-flex items-center gap-2.5 hero-btn"
-              href="mailto:sovbidrahul@gmail.com">
-              <span>GET IN TOUCH</span>
-              <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                <path d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-              </svg>
-            </a>
+          <!-- Animated Scroll Down Mouse Wheel Indicator -->
+          <a href="#spotlight"
+            class="mt-10 flex flex-col items-center gap-2 group cursor-pointer text-outline hover:text-primary transition-colors">
+            <span
+              class="font-mono text-[0.65rem] uppercase tracking-[0.25em] font-bold text-outline group-hover:text-primary transition-colors">
+              Scroll Down
+            </span>
+            <div
+              class="w-6 h-10 border-2 border-outline group-hover:border-primary rounded-full flex justify-center p-1 transition-colors">
+              <div
+                class="w-1.5 h-2.5 bg-outline group-hover:bg-primary rounded-full animate-bounce mt-1 transition-colors">
+              </div>
+            </div>
+            <svg class="w-4 h-4 text-outline group-hover:text-primary animate-pulse transition-colors" fill="none"
+              stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+            </svg>
+          </a>
+        </div>
+      </section>
+
+      <!-- SPOTLIGHT: TOKYO CORPORATE + OTT ORIGINAL WEB SERIES -->
+      <section class="w-full px-6 lg:px-12 py-16 bg-surface-container-low border-t border-outline-variant"
+        id="spotlight">
+        <div class="max-w-7xl mx-auto flex flex-col gap-10">
+          <div class="flex flex-col md:flex-row md:items-end justify-between border-b border-primary pb-3 gap-2">
+            <div>
+              <span class="font-mono text-[0.75rem] text-accent-gold uppercase tracking-[0.2em] font-medium">EXECUTIVE
+                HIGHLIGHTS</span>
+              <h2 class="font-display text-[2.25rem] uppercase text-primary tracking-tight font-extrabold mt-0.5">
+                ORIGINAL SHOWS
+              </h2>
+            </div>
+            <!-- <div class="font-mono text-[0.75rem] text-outline uppercase tracking-widest">
+              Watcho Original • Matrix Inc. Tokyo • Zero-Defect Standards
+            </div> -->
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+            <!-- Left Card: Watcho Original "Singlehood" Series -->
+            <div
+              class="lg:col-span-7 flex flex-col bg-white border border-outline-variant overflow-hidden reveal-card shadow-sm">
+              <div
+                class="flex justify-between items-center px-4 py-2.5 border-b border-outline-variant bg-surface-container-low font-mono text-[0.75rem]">
+                <span class="text-primary font-bold flex items-center gap-2">
+                  <span class="inline-block w-2 h-2 rounded-full bg-red-600"></span>
+                  WATCHO ORIGINAL SERIES
+                </span>
+                <span class="text-accent-gold font-bold">PRODUCER &amp; CREATIVE DIRECTOR</span>
+              </div>
+
+              <div class="relative w-full aspect-[16/9] bg-neutral-900 overflow-hidden group">
+                <img src="singlehood.png" alt="Singlehood Watcho Original Series"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-6">
+                  <span class="font-mono text-[0.65rem] text-accent-gold uppercase tracking-widest font-bold">Streaming
+                    on Watcho</span>
+                  <h3 class="font-display text-2xl sm:text-3xl uppercase font-black text-white">SINGLEHOOD</h3>
+                </div>
+              </div>
+
+              <div class="p-6 flex flex-col gap-4 bg-white">
+                <div>
+                  <div class="flex flex-wrap items-center justify-between gap-2">
+                    <span class="font-display text-lg uppercase text-primary font-black">SINGLEHOOD (TV SERIES)</span>
+                    <span class="font-mono text-xs text-outline">Watcho / Dish TV Original</span>
+                  </div>
+                  <p class="font-sans text-sm text-on-surface-variant mt-2 leading-relaxed">
+                    Spearheaded as <strong>Producer and Creative Director</strong>. Managed full production cycle from
+                    script refinement, casting, on-set direction and styling to multi-camera execution, post-production
+                    and final platform delivery.
+                  </p>
+                </div>
+                <div class="flex items-center justify-between pt-3 border-t border-outline-variant">
+                  <span class="font-mono text-xs text-outline uppercase">Executive &amp; Creative Ownership</span>
+                  <a href="https://www.watcho.com/tvshow/singlehood-1" target="_blank" rel="noopener noreferrer"
+                    class="inline-flex items-center gap-1.5 font-mono text-xs uppercase tracking-wider text-primary font-bold hover:text-accent-gold transition-colors">
+                    <span>Watch on Watcho</span>
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                      <path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Card: Tokyo Corporate (Matrix Inc.) Spotlight -->
+            <div
+              class="lg:col-span-5 flex flex-col justify-between bg-primary text-white border border-primary p-6 sm:p-8 reveal-card shadow-sm">
+              <div class="flex flex-col gap-4">
+                <div class="flex items-center justify-between border-b border-neutral-800 pb-3">
+                  <span class="font-mono text-xs text-accent-gold uppercase tracking-widest font-bold">2021 &ndash; 2025
+                    (4 YEARS)</span>
+                  <span class="font-mono text-xs text-neutral-400 uppercase">TOKYO, JAPAN</span>
+                </div>
+
+                <div>
+                  <h3 class="font-display text-2xl uppercase font-black text-white">MATRIX INC. (TOKYO)</h3>
+                  <div class="font-mono text-xs text-accent-gold uppercase mt-1">Creative Director &amp; Producer</div>
+                </div>
+
+                <div class="space-y-3 text-sm text-neutral-300 font-sans leading-relaxed mt-2">
+                  <div class="flex items-start gap-2.5">
+                    <span class="text-accent-gold font-bold text-base">&bull;</span>
+                    <span><strong>40+ Projects across 26 Countries:</strong> Directed international documentary series
+                      &amp; global brand campaigns across 5 continents as primary on-screen deliverable lead.</span>
+                  </div>
+                  <div class="flex items-start gap-2.5">
+                    <span class="text-accent-gold font-bold text-base">&bull;</span>
+                    <span><strong>Japanese Zero-Defect Standards:</strong> Owned budgets end-to-end with <strong>zero
+                        overruns across 4 years</strong>, precision deadlines, and strict quality documentation.</span>
+                  </div>
+                  <div class="flex items-start gap-2.5">
+                    <span class="text-accent-gold font-bold text-base">&bull;</span>
+                    <span><strong>Advanced Pipeline Integration:</strong> Embedded cutting-edge AI video generators
+                      (Runway, Pika, HeyGen) &amp; VR workflows directly into the production lifecycle.</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-6 pt-4 border-t border-neutral-800 flex items-center justify-between font-mono text-xs">
+                <span class="text-neutral-400 uppercase">Execution Benchmark</span>
+                <span class="text-accent-gold font-bold uppercase">100% On-Time &bull; Zero Overrun</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      <!-- BRAND COMMERCIALS SHOWCASE (PLAYABLE VIDEOS) -->
-      <section class="w-full px-6 lg:px-12 py-16 bg-surface-container-low border-t border-outline-variant" id="works">
-        <div class="max-w-7xl mx-auto flex flex-col gap-8">
+      <!-- FEATURE FILMS & BTS DIRECTING SHOWCASE (YOUTUBE EMBEDS + LOCAL VIDEOS) -->
+      <section class="w-full px-6 lg:px-12 py-16 bg-surface border-t border-outline-variant" id="films">
+        <div class="max-w-7xl mx-auto flex flex-col gap-10">
+          <div class="flex flex-col md:flex-row md:items-end justify-between border-b border-primary pb-3 gap-2">
+            <div>
+              <span class="font-mono text-[0.75rem] text-accent-gold uppercase tracking-[0.2em] font-medium">THEATRICAL
+                &amp; OTT FEATURE FILMS</span>
+              <h2 class="font-display text-[2.25rem] uppercase text-primary tracking-tight font-extrabold mt-0.5">
+                MAKING &amp; BTS DIRECTION
+              </h2>
+            </div>
+            <div class="font-mono text-[0.75rem] text-outline uppercase tracking-widest">
+              T-Series • RSVP • Zee5 • Disney+ • Fox Star
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            <!-- Video 1: Making of Raid (Part 1 - Ajay Devgn & Ileana D'Cruz) -->
+            <div
+              class="flex flex-col bg-white border border-outline-variant overflow-hidden video-card-hover reveal-card shadow-sm">
+              <div
+                class="flex justify-between items-center px-3.5 py-2 border-b border-outline-variant bg-surface-container-low font-mono text-[0.725rem]">
+                <span class="text-primary font-bold">RAID (2018) &bull; PART 1</span>
+                <span class="text-accent-gold font-bold">BTS DIRECTOR</span>
+              </div>
+              <div class="relative w-full aspect-video bg-black group cursor-pointer"
+                onclick="openVideoModal('local', 'Video%20producer%20-%20Films/Making%20of%20Raid%20%20Ajay%20Devgn%20%20Ileana%20D_Cruz%20-%20T-Series%20(1080p,%20h264).mp4', 'Making of Raid — Part 1 | Ajay Devgn &amp; Ileana D\'Cruz')">
+                <img src="https://img.youtube.com/vi/w2dtNb7wqXs/hqdefault.jpg" alt="Making of Raid Part 1"
+                  class="w-full h-full object-cover">
+                <div
+                  class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all flex items-center justify-center">
+                  <div class="relative flex items-center justify-center">
+                    <span
+                      class="absolute w-14 h-14 rounded-full bg-accent-gold/30 animate-ping pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                    <div
+                      class="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-neutral-950/80 backdrop-blur-md border border-accent-gold/60 text-accent-gold flex items-center justify-center shadow-2xl group-hover:scale-110 group-hover:bg-accent-gold group-hover:text-black group-hover:border-white transition-all duration-300">
+                      <svg class="w-5 h-5 sm:w-6 sm:h-6 fill-current ml-0.5" viewBox="0 0 24 24">
+                        <path d="M8 5v14l11-7z" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="absolute bottom-2 right-2 px-2 py-0.5 bg-black/80 text-white font-mono text-[0.65rem] uppercase">
+                  T-Series BTS &bull; 1080p HD
+                </div>
+              </div>
+              <div class="p-4 flex flex-col justify-between flex-1 bg-white">
+                <div>
+                  <div class="font-display text-[1rem] uppercase text-primary font-extrabold">MAKING OF RAID &mdash; PT.
+                    1</div>
+                  <div class="font-mono text-[0.7rem] text-outline uppercase mt-0.5">Ajay Devgn &bull; Ileana D'Cruz
+                  </div>
+                </div>
+                <div class="mt-3 pt-2 border-t border-outline-variant flex items-center justify-between">
+                  <button
+                    onclick="openVideoModal('local', 'Video%20producer%20-%20Films/Making%20of%20Raid%20%20Ajay%20Devgn%20%20Ileana%20D_Cruz%20-%20T-Series%20(1080p,%20h264).mp4', 'Making of Raid — Part 1 | Ajay Devgn &amp; Ileana D\'Cruz')"
+                    class="font-mono text-xs uppercase text-primary font-bold hover:text-accent-gold flex items-center gap-1">
+                    <span>Watch Part 1</span> &rarr;
+                  </button>
+                  <span class="font-mono text-[0.65rem] text-outline">T-Series</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Video 2: Making of Raid (Part 2 - Pushpa Joshi & Characters) -->
+            <div
+              class="flex flex-col bg-white border border-outline-variant overflow-hidden video-card-hover reveal-card shadow-sm">
+              <div
+                class="flex justify-between items-center px-3.5 py-2 border-b border-outline-variant bg-surface-container-low font-mono text-[0.725rem]">
+                <span class="text-primary font-bold">RAID (2018) &bull; PART 2</span>
+                <span class="text-accent-gold font-bold">BTS DIRECTOR</span>
+              </div>
+              <div class="relative w-full aspect-video bg-black group cursor-pointer"
+                onclick="openVideoModal('local', 'Video%20producer%20-%20Films/Making%20of%20Raid%20%20%20Pushpa%20Joshi%20%20Ajay%20Devgn%20%20Ileana%20D_Cruz%20%20Raj%20Kumar%20Gupta%20-%20T-Series%20(1080p,%20h264).mp4', 'Making of Raid — Part 2 (Ammaji) | Pushpa Joshi, Ajay Devgn')">
+                <img src="https://img.youtube.com/vi/MNhiSL5Ff5M/hqdefault.jpg" alt="Making of Raid Part 2"
+                  class="w-full h-full object-cover">
+                <div
+                  class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all flex items-center justify-center">
+                  <div class="relative flex items-center justify-center">
+                    <span
+                      class="absolute w-14 h-14 rounded-full bg-accent-gold/30 animate-ping pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                    <div
+                      class="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-neutral-950/80 backdrop-blur-md border border-accent-gold/60 text-accent-gold flex items-center justify-center shadow-2xl group-hover:scale-110 group-hover:bg-accent-gold group-hover:text-black group-hover:border-white transition-all duration-300">
+                      <svg class="w-5 h-5 sm:w-6 sm:h-6 fill-current ml-0.5" viewBox="0 0 24 24">
+                        <path d="M8 5v14l11-7z" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="absolute bottom-2 right-2 px-2 py-0.5 bg-black/80 text-white font-mono text-[0.65rem] uppercase">
+                  Character BTS &bull; 1080p HD
+                </div>
+              </div>
+              <div class="p-4 flex flex-col justify-between flex-1 bg-white">
+                <div>
+                  <div class="font-display text-[1rem] uppercase text-primary font-extrabold">MAKING OF RAID &mdash; PT.
+                    2 (AMMAJI)</div>
+                  <div class="font-mono text-[0.7rem] text-outline uppercase mt-0.5">Pushpa Joshi &bull; Saurabh Shukla
+                    &bull; Ajay Devgn</div>
+                </div>
+                <div class="mt-3 pt-2 border-t border-outline-variant flex items-center justify-between">
+                  <button
+                    onclick="openVideoModal('local', 'Video%20producer%20-%20Films/Making%20of%20Raid%20%20%20Pushpa%20Joshi%20%20Ajay%20Devgn%20%20Ileana%20D_Cruz%20%20Raj%20Kumar%20Gupta%20-%20T-Series%20(1080p,%20h264).mp4', 'Making of Raid — Part 2 (Ammaji) | Pushpa Joshi, Ajay Devgn')"
+                    class="font-mono text-xs uppercase text-primary font-bold hover:text-accent-gold flex items-center gap-1">
+                    <span>Watch Part 2</span> &rarr;
+                  </button>
+                  <span class="font-mono text-[0.65rem] text-outline">T-Series</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Video 3: Making of Raid (Part 3 - Director's Vision & Climax) -->
+            <div
+              class="flex flex-col bg-white border border-outline-variant overflow-hidden video-card-hover reveal-card shadow-sm">
+              <div
+                class="flex justify-between items-center px-3.5 py-2 border-b border-outline-variant bg-surface-container-low font-mono text-[0.725rem]">
+                <span class="text-primary font-bold">RAID (2018) &bull; PART 3</span>
+                <span class="text-accent-gold font-bold">BTS DIRECTOR</span>
+              </div>
+              <div class="relative w-full aspect-video bg-black group cursor-pointer"
+                onclick="openVideoModal('yt', 'JgWpMO0bAsA', 'Making of Raid — Part 3 | Raj Kumar Gupta &amp; Climax')">
+                <img src="https://img.youtube.com/vi/JgWpMO0bAsA/hqdefault.jpg" alt="Making of Raid Part 3"
+                  class="w-full h-full object-cover">
+                <div
+                  class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all flex items-center justify-center">
+                  <div class="relative flex items-center justify-center">
+                    <span
+                      class="absolute w-14 h-14 rounded-full bg-accent-gold/30 animate-ping pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                    <div
+                      class="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-neutral-950/80 backdrop-blur-md border border-accent-gold/60 text-accent-gold flex items-center justify-center shadow-2xl group-hover:scale-110 group-hover:bg-accent-gold group-hover:text-black group-hover:border-white transition-all duration-300">
+                      <svg class="w-5 h-5 sm:w-6 sm:h-6 fill-current ml-0.5" viewBox="0 0 24 24">
+                        <path d="M8 5v14l11-7z" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="absolute bottom-2 right-2 px-2 py-0.5 bg-black/80 text-white font-mono text-[0.65rem] uppercase">
+                  Director's Vision
+                </div>
+              </div>
+              <div class="p-4 flex flex-col justify-between flex-1 bg-white">
+                <div>
+                  <div class="font-display text-[1rem] uppercase text-primary font-extrabold">MAKING OF RAID &mdash; PT.
+                    3</div>
+                  <div class="font-mono text-[0.7rem] text-outline uppercase mt-0.5">Raj Kumar Gupta &bull; High-Stakes
+                    Narrative</div>
+                </div>
+                <div class="mt-3 pt-2 border-t border-outline-variant flex items-center justify-between">
+                  <button
+                    onclick="openVideoModal('yt', 'JgWpMO0bAsA', 'Making of Raid — Part 3 | Raj Kumar Gupta &amp; Climax')"
+                    class="font-mono text-xs uppercase text-primary font-bold hover:text-accent-gold flex items-center gap-1">
+                    <span>Watch Part 3</span> &rarr;
+                  </button>
+                  <span class="font-mono text-[0.65rem] text-outline">T-Series</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Video 4: Making of Raid (Part 4 - The Raid Set & Action) -->
+            <div
+              class="flex flex-col bg-white border border-outline-variant overflow-hidden video-card-hover reveal-card shadow-sm">
+              <div
+                class="flex justify-between items-center px-3.5 py-2 border-b border-outline-variant bg-surface-container-low font-mono text-[0.725rem]">
+                <span class="text-primary font-bold">RAID (2018) &bull; PART 4</span>
+                <span class="text-accent-gold font-bold">BTS DIRECTOR</span>
+              </div>
+              <div class="relative w-full aspect-video bg-black group cursor-pointer"
+                onclick="openVideoModal('local', 'Video%20producer%20-%20Films/Making%20of%20Raid%204%20%20Ajay%20Devgn%20%20Ileana%20D_Cruz%20%20Raj%20Kumar%20Gupta%20-%20T-Series%20(1080p,%20h264).mp4', 'Making of Raid — Part 4 | The Raid House &amp; Action')">
+                <img src="https://img.youtube.com/vi/xOxgBDq3prc/hqdefault.jpg" alt="Making of Raid Part 4"
+                  class="w-full h-full object-cover">
+                <div
+                  class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all flex items-center justify-center">
+                  <div class="relative flex items-center justify-center">
+                    <span
+                      class="absolute w-14 h-14 rounded-full bg-accent-gold/30 animate-ping pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                    <div
+                      class="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-neutral-950/80 backdrop-blur-md border border-accent-gold/60 text-accent-gold flex items-center justify-center shadow-2xl group-hover:scale-110 group-hover:bg-accent-gold group-hover:text-black group-hover:border-white transition-all duration-300">
+                      <svg class="w-5 h-5 sm:w-6 sm:h-6 fill-current ml-0.5" viewBox="0 0 24 24">
+                        <path d="M8 5v14l11-7z" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="absolute bottom-2 right-2 px-2 py-0.5 bg-black/80 text-white font-mono text-[0.65rem] uppercase">
+                  Production Design BTS &bull; 1080p HD
+                </div>
+              </div>
+              <div class="p-4 flex flex-col justify-between flex-1 bg-white">
+                <div>
+                  <div class="font-display text-[1rem] uppercase text-primary font-extrabold">MAKING OF RAID &mdash; PT.
+                    4</div>
+                  <div class="font-mono text-[0.7rem] text-outline uppercase mt-0.5">The White House Set &bull; Lucknow
+                    Shoot</div>
+                </div>
+                <div class="mt-3 pt-2 border-t border-outline-variant flex items-center justify-between">
+                  <button
+                    onclick="openVideoModal('local', 'Video%20producer%20-%20Films/Making%20of%20Raid%204%20%20Ajay%20Devgn%20%20Ileana%20D_Cruz%20%20Raj%20Kumar%20Gupta%20-%20T-Series%20(1080p,%20h264).mp4', 'Making of Raid — Part 4 | The Raid House &amp; Action')"
+                    class="font-mono text-xs uppercase text-primary font-bold hover:text-accent-gold flex items-center gap-1">
+                    <span>Watch Part 4</span> &rarr;
+                  </button>
+                  <span class="font-mono text-[0.65rem] text-outline">T-Series</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Video 5: Making of Nit Khair Manga - Raid -->
+            <div
+              class="flex flex-col bg-white border border-outline-variant overflow-hidden video-card-hover reveal-card shadow-sm">
+              <div
+                class="flex justify-between items-center px-3.5 py-2 border-b border-outline-variant bg-surface-container-low font-mono text-[0.725rem]">
+                <span class="text-primary font-bold">RAID &bull; NIT KHAIR MANGA</span>
+                <span class="text-accent-gold font-bold">SONG MAKING / BTS</span>
+              </div>
+              <div class="relative w-full aspect-video bg-black group cursor-pointer"
+                onclick="openVideoModal('yt', 'GGDWJbZL_UQ', 'Making of Nit Khair Manga — Raid')">
+                <img src="https://img.youtube.com/vi/GGDWJbZL_UQ/hqdefault.jpg" alt="Making of Nit Khair Manga Raid"
+                  class="w-full h-full object-cover">
+                <div
+                  class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all flex items-center justify-center">
+                  <div class="relative flex items-center justify-center">
+                    <span
+                      class="absolute w-14 h-14 rounded-full bg-accent-gold/30 animate-ping pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                    <div
+                      class="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-neutral-950/80 backdrop-blur-md border border-accent-gold/60 text-accent-gold flex items-center justify-center shadow-2xl group-hover:scale-110 group-hover:bg-accent-gold group-hover:text-black group-hover:border-white transition-all duration-300">
+                      <svg class="w-5 h-5 sm:w-6 sm:h-6 fill-current ml-0.5" viewBox="0 0 24 24">
+                        <path d="M8 5v14l11-7z" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="absolute bottom-2 right-2 px-2 py-0.5 bg-black/80 text-white font-mono text-[0.65rem] uppercase">
+                  Song Making
+                </div>
+              </div>
+              <div class="p-4 flex flex-col justify-between flex-1 bg-white">
+                <div>
+                  <div class="font-display text-[1rem] uppercase text-primary font-extrabold">NIT KHAIR MANGA (MAKING)
+                  </div>
+                  <div class="font-mono text-[0.7rem] text-outline uppercase mt-0.5">Rahat Fateh Ali Khan &bull; Ajay
+                    Devgn &bull; Ileana</div>
+                </div>
+                <div class="mt-3 pt-2 border-t border-outline-variant flex items-center justify-between">
+                  <button onclick="openVideoModal('yt', 'GGDWJbZL_UQ', 'Making of Nit Khair Manga — Raid')"
+                    class="font-mono text-xs uppercase text-primary font-bold hover:text-accent-gold flex items-center gap-1">
+                    <span>Watch Song BTS</span> &rarr;
+                  </button>
+                  <span class="font-mono text-[0.65rem] text-outline">T-Series Music</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Video 6: Making of Operation Parindey (ZEE5 Original) -->
+            <div
+              class="flex flex-col bg-white border border-outline-variant overflow-hidden video-card-hover reveal-card shadow-sm">
+              <div
+                class="flex justify-between items-center px-3.5 py-2 border-b border-outline-variant bg-surface-container-low font-mono text-[0.725rem]">
+                <span class="text-primary font-bold">OPERATION PARINDEY (2020)</span>
+                <span class="text-accent-gold font-bold">CONTENT PRODUCER</span>
+              </div>
+              <div class="relative w-full aspect-video bg-black group cursor-pointer"
+                onclick="openVideoModal('yt', '6zXXbIk4U3Q', 'Making of Operation Parindey — ZEE5')">
+                <img src="https://img.youtube.com/vi/6zXXbIk4U3Q/hqdefault.jpg" alt="Making of Operation Parindey"
+                  class="w-full h-full object-cover">
+                <div
+                  class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all flex items-center justify-center">
+                  <div class="relative flex items-center justify-center">
+                    <span
+                      class="absolute w-14 h-14 rounded-full bg-accent-gold/30 animate-ping pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                    <div
+                      class="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-neutral-950/80 backdrop-blur-md border border-accent-gold/60 text-accent-gold flex items-center justify-center shadow-2xl group-hover:scale-110 group-hover:bg-accent-gold group-hover:text-black group-hover:border-white transition-all duration-300">
+                      <svg class="w-5 h-5 sm:w-6 sm:h-6 fill-current ml-0.5" viewBox="0 0 24 24">
+                        <path d="M8 5v14l11-7z" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="absolute bottom-2 right-2 px-2 py-0.5 bg-black/80 text-white font-mono text-[0.65rem] uppercase">
+                  ZEE5 Original BTS
+                </div>
+              </div>
+              <div class="p-4 flex flex-col justify-between flex-1 bg-white">
+                <div>
+                  <div class="font-display text-[1rem] uppercase text-primary font-extrabold">MAKING OF OPERATION
+                    PARINDEY</div>
+                  <div class="font-mono text-[0.7rem] text-outline uppercase mt-0.5">Amit Sadh &bull; Rahul Dev &bull;
+                    Sanjay Gadhvi</div>
+                </div>
+                <div class="mt-3 pt-2 border-t border-outline-variant flex items-center justify-between">
+                  <button onclick="openVideoModal('yt', '6zXXbIk4U3Q', 'Making of Operation Parindey — ZEE5')"
+                    class="font-mono text-xs uppercase text-primary font-bold hover:text-accent-gold flex items-center gap-1">
+                    <span>Watch Making</span> &rarr;
+                  </button>
+                  <span class="font-mono text-[0.65rem] text-outline">ZEE5</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Video 7: Mard Ko Dard Nahi Hota (RSVP Movies) -->
+            <div
+              class="flex flex-col bg-white border border-outline-variant overflow-hidden video-card-hover reveal-card shadow-sm">
+              <div
+                class="flex justify-between items-center px-3.5 py-2 border-b border-outline-variant bg-surface-container-low font-mono text-[0.725rem]">
+                <span class="text-primary font-bold">MARD KO DARD NAHI HOTA</span>
+                <span class="text-accent-gold font-bold">BTS DIRECTOR / AP</span>
+              </div>
+              <div class="relative w-full aspect-video bg-black group cursor-pointer"
+                onclick="openVideoModal('local', 'Video%20producer%20-%20Films/Mard%20Ko%20Dard%20Nahi%20Hota%20%20Jimmy%20Vs.%20Mani%20%20Abhimanyu,%20Radhika,%20Gulshan%20%20Vasan%20%20In%20Cinemas%20-%20RSVP%20Movies%20(1080p,%20h264).mp4', 'Mard Ko Dard Nahi Hota — Jimmy Vs Mani BTS')">
+                <img src="https://img.youtube.com/vi/a-PUoN0wFuU/hqdefault.jpg" alt="Mard Ko Dard Nahi Hota"
+                  class="w-full h-full object-cover">
+                <div
+                  class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all flex items-center justify-center">
+                  <div class="relative flex items-center justify-center">
+                    <span
+                      class="absolute w-14 h-14 rounded-full bg-accent-gold/30 animate-ping pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                    <div
+                      class="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-neutral-950/80 backdrop-blur-md border border-accent-gold/60 text-accent-gold flex items-center justify-center shadow-2xl group-hover:scale-110 group-hover:bg-accent-gold group-hover:text-black group-hover:border-white transition-all duration-300">
+                      <svg class="w-5 h-5 sm:w-6 sm:h-6 fill-current ml-0.5" viewBox="0 0 24 24">
+                        <path d="M8 5v14l11-7z" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="absolute bottom-2 right-2 px-2 py-0.5 bg-black/80 text-white font-mono text-[0.65rem] uppercase">
+                  RSVP &bull; 1080p HD
+                </div>
+              </div>
+              <div class="p-4 flex flex-col justify-between flex-1 bg-white">
+                <div>
+                  <div class="font-display text-[1rem] uppercase text-primary font-extrabold">JIMMY VS. MANI (ACTION
+                    BTS)</div>
+                  <div class="font-mono text-[0.7rem] text-outline uppercase mt-0.5">Abhimanyu Dassani &bull; Gulshan
+                    Devaiah &bull; Vasan Bala</div>
+                </div>
+                <div class="mt-3 pt-2 border-t border-outline-variant flex items-center justify-between">
+                  <button onclick="openVideoModal('local', 'Video%20producer%20-%20Films/Mard%20Ko%20Dard%20Nahi%20Hota%20%20Jimmy%20Vs.%20Mani%20%20Abhimanyu,%20Radhika,%20Gulshan%20%20Vasan%20%20In%20Cinemas%20-%20RSVP%20Movies%20(1080p,%20h264).mp4', 'Mard Ko Dard Nahi Hota — Jimmy Vs Mani BTS')"
+                    class="font-mono text-xs uppercase text-primary font-bold hover:text-accent-gold flex items-center gap-1">
+                    <span>Watch Action BTS</span> &rarr;
+                  </button>
+                  <span class="font-mono text-[0.65rem] text-outline">RSVP Movies</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Video 8: Chasani (Gujarati Feature Film / Song) -->
+            <div
+              class="flex flex-col bg-white border border-outline-variant overflow-hidden video-card-hover reveal-card shadow-sm">
+              <div
+                class="flex justify-between items-center px-3.5 py-2 border-b border-outline-variant bg-surface-container-low font-mono text-[0.725rem]">
+                <span class="text-primary font-bold">CHASANI (2019)</span>
+                <span class="text-accent-gold font-bold">ASSOCIATE PRODUCER</span>
+              </div>
+              <div class="relative w-full aspect-video bg-black group cursor-pointer"
+                onclick="openVideoModal('yt', '_IM6hValJy4', 'Chasani — Mithoo Mithoo')">
+                <img src="https://img.youtube.com/vi/_IM6hValJy4/hqdefault.jpg" alt="Chasani Gujarati Movie"
+                  class="w-full h-full object-cover">
+                <div
+                  class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all flex items-center justify-center">
+                  <div class="relative flex items-center justify-center">
+                    <span
+                      class="absolute w-14 h-14 rounded-full bg-accent-gold/30 animate-ping pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                    <div
+                      class="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-neutral-950/80 backdrop-blur-md border border-accent-gold/60 text-accent-gold flex items-center justify-center shadow-2xl group-hover:scale-110 group-hover:bg-accent-gold group-hover:text-black group-hover:border-white transition-all duration-300">
+                      <svg class="w-5 h-5 sm:w-6 sm:h-6 fill-current ml-0.5" viewBox="0 0 24 24">
+                        <path d="M8 5v14l11-7z" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="absolute bottom-2 right-2 px-2 py-0.5 bg-black/80 text-white font-mono text-[0.65rem] uppercase">
+                  Feature Film Song
+                </div>
+              </div>
+              <div class="p-4 flex flex-col justify-between flex-1 bg-white">
+                <div>
+                  <div class="font-display text-[1rem] uppercase text-primary font-extrabold">CHASANI — MITHOO MITHOO
+                  </div>
+                  <div class="font-mono text-[0.7rem] text-outline uppercase mt-0.5">Manoj Joshi &bull; Sejal Shah
+                    &bull; Divyang Thakkar</div>
+                </div>
+                <div class="mt-3 pt-2 border-t border-outline-variant flex items-center justify-between">
+                  <button onclick="openVideoModal('yt', '_IM6hValJy4', 'Chasani — Mithoo Mithoo')"
+                    class="font-mono text-xs uppercase text-primary font-bold hover:text-accent-gold flex items-center gap-1">
+                    <span>Watch Song</span> &rarr;
+                  </button>
+                  <span class="font-mono text-[0.65rem] text-outline">Gujarati Cinema</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Video 9: Making of Paltan (J.P. Dutta / Zee Music) -->
+            <div
+              class="flex flex-col bg-white border border-outline-variant overflow-hidden video-card-hover reveal-card shadow-sm">
+              <div
+                class="flex justify-between items-center px-3.5 py-2 border-b border-outline-variant bg-surface-container-low font-mono text-[0.725rem]">
+                <span class="text-primary font-bold">PALTAN (2018)</span>
+                <span class="text-accent-gold font-bold">BTS DIRECTOR</span>
+              </div>
+              <div class="relative w-full aspect-video bg-black group cursor-pointer"
+                onclick="openVideoModal('local', 'Video producer - Films/Main Zinda Hoon - Making  Paltan  Javed Akhtar  J P Dutta  Releasing On 7th September - Zee Music Company (1080p, h264).mp4', 'Making of Paltan — J.P. Dutta')">
+                <video muted playsinline class="w-full h-full object-cover">
+                  <source
+                    src="Video%20producer%20-%20Films/Main%20Zinda%20Hoon%20-%20Making%20%20Paltan%20%20Javed%20Akhtar%20%20J%20P%20Dutta%20%20Releasing%20On%207th%20September%20-%20Zee%20Music%20Company%20(1080p,%20h264).mp4"
+                    type="video/mp4">
+                </video>
+                <div
+                  class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all flex items-center justify-center">
+                  <div class="relative flex items-center justify-center">
+                    <span
+                      class="absolute w-14 h-14 rounded-full bg-accent-gold/30 animate-ping pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                    <div
+                      class="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-neutral-950/80 backdrop-blur-md border border-accent-gold/60 text-accent-gold flex items-center justify-center shadow-2xl group-hover:scale-110 group-hover:bg-accent-gold group-hover:text-black group-hover:border-white transition-all duration-300">
+                      <svg class="w-5 h-5 sm:w-6 sm:h-6 fill-current ml-0.5" viewBox="0 0 24 24">
+                        <path d="M8 5v14l11-7z" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="absolute bottom-2 right-2 px-2 py-0.5 bg-black/80 text-white font-mono text-[0.65rem] uppercase">
+                  Ladakh Shoot BTS
+                </div>
+              </div>
+              <div class="p-4 flex flex-col justify-between flex-1 bg-white">
+                <div>
+                  <div class="font-display text-[1rem] uppercase text-primary font-extrabold">MAKING OF PALTAN</div>
+                  <div class="font-mono text-[0.7rem] text-outline uppercase mt-0.5">Jackie Shroff &bull; Arjun Rampal
+                    &bull; Sonu Sood</div>
+                </div>
+                <div class="mt-3 pt-2 border-t border-outline-variant flex items-center justify-between">
+                  <button
+                    onclick="openVideoModal('local', 'Video producer - Films/Main Zinda Hoon - Making  Paltan  Javed Akhtar  J P Dutta  Releasing On 7th September - Zee Music Company (1080p, h264).mp4', 'Making of Paltan — J.P. Dutta')"
+                    class="font-mono text-xs uppercase text-primary font-bold hover:text-accent-gold flex items-center gap-1">
+                    <span>Watch Making</span> &rarr;
+                  </button>
+                  <span class="font-mono text-[0.65rem] text-outline">Zee Music</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- BRAND COMMERCIALS & NATIONAL AD CAMPAIGNS -->
+      <section class="w-full px-6 lg:px-12 py-16 bg-surface-container-low border-t border-outline-variant"
+        id="commercials">
+        <div class="max-w-7xl mx-auto flex flex-col gap-10">
           <div class="flex flex-col md:flex-row md:items-end justify-between border-b border-primary pb-3 gap-2">
             <div>
               <span class="font-mono text-[0.75rem] text-accent-gold uppercase tracking-[0.2em] font-medium">COMMERCIAL
                 PRODUCTION</span>
-              <h2 class="font-display text-[2.25rem] uppercase text-primary tracking-tight font-extrabold mt-0.5">BRAND
-                AD FILMS</h2>
+              <h2 class="font-display text-[2.25rem] uppercase text-primary tracking-tight font-extrabold mt-0.5">
+                BRAND AD FILMS &amp; CAMPAIGNS
+              </h2>
             </div>
             <div class="font-mono text-[0.75rem] text-outline uppercase tracking-widest">
-              L'Oréal • Croma • Flipkart • Tanishq
+              L'Oréal • Croma • Fevicol • Tanishq • Manyavar • Flipkart
             </div>
           </div>
 
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <!-- Video 1: L'Oreal -->
-            <div class="flex flex-col bg-white border border-outline-variant overflow-hidden reveal-card shadow-sm">
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            <!-- Commercial 1: Croma Ad (YouTube & Local) -->
+            <div
+              class="flex flex-col bg-white border border-outline-variant overflow-hidden video-card-hover reveal-card shadow-sm">
               <div
-                class="flex justify-between items-center px-4 py-2.5 border-b border-outline-variant bg-surface-container-low font-mono text-[0.75rem]">
+                class="flex justify-between items-center px-3.5 py-2 border-b border-outline-variant bg-surface-container-low font-mono text-[0.725rem]">
+                <span class="text-primary font-bold">CROMA (TATA)</span>
+                <span class="text-accent-gold font-bold">PRODUCER / DIRECTOR</span>
+              </div>
+              <div class="relative w-full aspect-video bg-black group cursor-pointer"
+                onclick="openVideoModal('local', 'Ad%20film/Croma%20hai%20na,%20with%20you%20for%20a%20lifetime!%20-%20Croma%20(1080p,%20h264).mp4', 'Croma — With You For A Lifetime')">
+                <img src="https://img.youtube.com/vi/1VsTz5QRo4Q/hqdefault.jpg" alt="Croma Ad"
+                  class="w-full h-full object-cover">
+                <div
+                  class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all flex items-center justify-center">
+                  <div class="relative flex items-center justify-center">
+                    <span
+                      class="absolute w-14 h-14 rounded-full bg-accent-gold/30 animate-ping pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                    <div
+                      class="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-neutral-950/80 backdrop-blur-md border border-accent-gold/60 text-accent-gold flex items-center justify-center shadow-2xl group-hover:scale-110 group-hover:bg-accent-gold group-hover:text-black group-hover:border-white transition-all duration-300">
+                      <svg class="w-5 h-5 sm:w-6 sm:h-6 fill-current ml-0.5" viewBox="0 0 24 24">
+                        <path d="M8 5v14l11-7z" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="absolute bottom-2 right-2 px-2 py-0.5 bg-black/80 text-white font-mono text-[0.65rem] uppercase">
+                  National TVC &bull; 1080p HD
+                </div>
+              </div>
+              <div class="p-4 flex flex-col justify-between flex-1 bg-white">
+                <div>
+                  <div class="font-display text-[1rem] uppercase text-primary font-extrabold">CROMA &mdash; WITH YOU FOR
+                    A LIFETIME</div>
+                  <div class="font-mono text-[0.7rem] text-outline uppercase mt-0.5">National TV &amp; Digital Ad
+                    Campaign</div>
+                </div>
+                <div class="mt-3 pt-2 border-t border-outline-variant flex items-center justify-between">
+                  <button onclick="openVideoModal('local', 'Ad%20film/Croma%20hai%20na,%20with%20you%20for%20a%20lifetime!%20-%20Croma%20(1080p,%20h264).mp4', 'Croma — With You For A Lifetime')"
+                    class="font-mono text-xs uppercase text-primary font-bold hover:text-accent-gold flex items-center gap-1">
+                    <span>Play Commercial</span> &rarr;
+                  </button>
+                  <span class="font-mono text-[0.65rem] text-outline">Tata Croma</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Commercial 2: Fevicol Ad -->
+            <div
+              class="flex flex-col bg-white border border-outline-variant overflow-hidden video-card-hover reveal-card shadow-sm">
+              <div
+                class="flex justify-between items-center px-3.5 py-2 border-b border-outline-variant bg-surface-container-low font-mono text-[0.725rem]">
+                <span class="text-primary font-bold">FEVICOL (PIDILITE)</span>
+                <span class="text-accent-gold font-bold">ASSISTANT DIRECTOR</span>
+              </div>
+              <div class="relative w-full aspect-video bg-black group cursor-pointer"
+                onclick="openVideoModal('yt', 'tqU9_4SmP-w', 'Fevicol — Marine Waterproof Commercial')">
+                <img src="https://img.youtube.com/vi/tqU9_4SmP-w/hqdefault.jpg" alt="Fevicol Ad"
+                  class="w-full h-full object-cover">
+                <div
+                  class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all flex items-center justify-center">
+                  <div class="relative flex items-center justify-center">
+                    <span
+                      class="absolute w-14 h-14 rounded-full bg-accent-gold/30 animate-ping pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                    <div
+                      class="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-neutral-950/80 backdrop-blur-md border border-accent-gold/60 text-accent-gold flex items-center justify-center shadow-2xl group-hover:scale-110 group-hover:bg-accent-gold group-hover:text-black group-hover:border-white transition-all duration-300">
+                      <svg class="w-5 h-5 sm:w-6 sm:h-6 fill-current ml-0.5" viewBox="0 0 24 24">
+                        <path d="M8 5v14l11-7z" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="absolute bottom-2 right-2 px-2 py-0.5 bg-black/80 text-white font-mono text-[0.65rem] uppercase">
+                  Brand Commercial
+                </div>
+              </div>
+              <div class="p-4 flex flex-col justify-between flex-1 bg-white">
+                <div>
+                  <div class="font-display text-[1rem] uppercase text-primary font-extrabold">FEVICOL MARINE WATERPROOF
+                  </div>
+                  <div class="font-mono text-[0.7rem] text-outline uppercase mt-0.5">Iconic Pidilite Humor TVC</div>
+                </div>
+                <div class="mt-3 pt-2 border-t border-outline-variant flex items-center justify-between">
+                  <button onclick="openVideoModal('yt', 'tqU9_4SmP-w', 'Fevicol — Marine Waterproof Commercial')"
+                    class="font-mono text-xs uppercase text-primary font-bold hover:text-accent-gold flex items-center gap-1">
+                    <span>Play Commercial</span> &rarr;
+                  </button>
+                  <span class="font-mono text-[0.65rem] text-outline">Pidilite</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Commercial 3: L'Oreal Paris (Local MP4) -->
+            <div
+              class="flex flex-col bg-white border border-outline-variant overflow-hidden video-card-hover reveal-card shadow-sm">
+              <div
+                class="flex justify-between items-center px-3.5 py-2 border-b border-outline-variant bg-surface-container-low font-mono text-[0.725rem]">
                 <span class="text-primary font-bold">L'ORÉAL PARIS</span>
                 <span class="text-accent-gold font-bold">CREATIVE DIRECTOR</span>
               </div>
-              <div class="relative w-full aspect-video bg-black">
-                <video autoplay loop muted playsinline controls preload="metadata" class="w-full h-full object-cover">
+              <div class="relative w-full aspect-video bg-black group cursor-pointer"
+                onclick="openVideoModal('local', 'Ad film/loreal.mp4', 'L\'Oréal Paris — Revitalift Crystal')">
+                <video muted playsinline class="w-full h-full object-cover">
                   <source src="Ad%20film/loreal.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
                 </video>
+                <div
+                  class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all flex items-center justify-center">
+                  <div class="relative flex items-center justify-center">
+                    <span
+                      class="absolute w-14 h-14 rounded-full bg-accent-gold/30 animate-ping pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                    <div
+                      class="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-neutral-950/80 backdrop-blur-md border border-accent-gold/60 text-accent-gold flex items-center justify-center shadow-2xl group-hover:scale-110 group-hover:bg-accent-gold group-hover:text-black group-hover:border-white transition-all duration-300">
+                      <svg class="w-5 h-5 sm:w-6 sm:h-6 fill-current ml-0.5" viewBox="0 0 24 24">
+                        <path d="M8 5v14l11-7z" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="absolute bottom-2 right-2 px-2 py-0.5 bg-black/80 text-white font-mono text-[0.65rem] uppercase">
+                  Beauty &amp; High Fashion
+                </div>
               </div>
-              <div class="p-4 flex flex-col gap-1 bg-white">
-                <div class="font-display text-[1.125rem] uppercase text-primary font-extrabold">L'ORÉAL PARIS —
-                  REVITALIFT CRYSTAL</div>
-                <div class="font-mono text-[0.75rem] text-outline uppercase">National Commercial Campaign</div>
+              <div class="p-4 flex flex-col justify-between flex-1 bg-white">
+                <div>
+                  <div class="font-display text-[1rem] uppercase text-primary font-extrabold">L'ORÉAL &mdash; REVITALIFT
+                    CRYSTAL</div>
+                  <div class="font-mono text-[0.7rem] text-outline uppercase mt-0.5">National Campaign Direction</div>
+                </div>
+                <div class="mt-3 pt-2 border-t border-outline-variant flex items-center justify-between">
+                  <button onclick="openVideoModal('local', 'Ad film/loreal.mp4', 'L\'Oréal Paris — Revitalift Crystal')"
+                    class="font-mono text-xs uppercase text-primary font-bold hover:text-accent-gold flex items-center gap-1">
+                    <span>Play Commercial</span> &rarr;
+                  </button>
+                  <span class="font-mono text-[0.65rem] text-outline">L'Oréal</span>
+                </div>
               </div>
             </div>
 
-            <!-- Video 2: Croma -->
-            <div class="flex flex-col bg-white border border-outline-variant overflow-hidden reveal-card shadow-sm">
+          </div>
+
+          <!-- FEATURED NATIONAL BRAND DIRECTING & COMMERCIAL CREDITS -->
+          <div class="flex flex-col gap-4 mt-2">
+            <div class="flex items-center justify-between border-b border-outline-variant pb-2.5">
+              <div class="flex items-center gap-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-accent-gold animate-pulse"></span>
+                <span class="font-mono text-xs uppercase tracking-[0.2em] text-primary font-bold">KEY COMMERCIAL
+                  DIRECTING &amp; CAMPAIGN PORTFOLIO</span>
+              </div>
+              <span
+                class="font-mono text-[0.7rem] text-accent-gold font-bold uppercase tracking-wider hidden sm:inline">NATIONAL
+                &bull; FESTIVE &bull; E-COMMERCE</span>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+              <!-- Brand Card 1: TANISHQ JEWELLERY -->
               <div
-                class="flex justify-between items-center px-4 py-2.5 border-b border-outline-variant bg-surface-container-low font-mono text-[0.75rem]">
-                <span class="text-primary font-bold">CROMA</span>
-                <span class="text-accent-gold font-bold">PRODUCER / DIRECTOR</span>
+                class="group relative bg-white border border-outline-variant hover:border-accent-gold p-5 flex flex-col justify-between transition-all duration-300 shadow-sm hover:shadow-md hover:-translate-y-1">
+                <div class="flex flex-col gap-2">
+
+                  <h3
+                    class="font-display text-xl sm:text-[1.35rem] font-black text-primary uppercase tracking-tight group-hover:text-accent-gold transition-colors mt-1">
+                    TANISHQ JEWELLERY
+                  </h3>
+                  <div class="font-sans font-extrabold text-sm text-primary tracking-wide">
+                    Creative Director
+                  </div>
+                </div>
+                <div
+                  class="mt-4 pt-3 border-t border-outline-variant flex items-center justify-between font-mono text-xs">
+                  <span class="text-on-surface-variant text-[0.7rem] uppercase tracking-wider font-semibold">National
+                    Festive &amp; Bridal</span>
+                </div>
               </div>
-              <div class="relative w-full aspect-video bg-black">
-                <video autoplay loop muted playsinline controls preload="metadata" class="w-full h-full object-cover">
-                  <source
-                    src="Ad%20film/Croma%20hai%20na,%20with%20you%20for%20a%20lifetime!%20-%20Croma%20(1080p,%20h264).mp4"
-                    type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
+
+              <!-- Brand Card 2: MANYAVAR -->
+              <div
+                class="group relative bg-white border border-outline-variant hover:border-accent-gold p-5 flex flex-col justify-between transition-all duration-300 shadow-sm hover:shadow-md hover:-translate-y-1">
+                <div class="flex flex-col gap-2">
+
+                  <h3
+                    class="font-display text-xl sm:text-[1.35rem] font-black text-primary uppercase tracking-tight group-hover:text-accent-gold transition-colors mt-1">
+                    MANYAVAR
+                  </h3>
+                  <div class="font-sans font-extrabold text-sm text-primary tracking-wide">
+                    Assistant Director
+                  </div>
+                </div>
+                <div
+                  class="mt-4 pt-3 border-t border-outline-variant flex items-center justify-between font-mono text-xs">
+                  <span class="text-on-surface-variant text-[0.7rem] uppercase tracking-wider font-semibold">Ethnic
+                    Festive Campaigns</span>
+                </div>
               </div>
-              <div class="p-4 flex flex-col gap-1 bg-white">
-                <div class="font-display text-[1.125rem] uppercase text-primary font-extrabold">CROMA — WITH YOU FOR A
-                  LIFETIME</div>
-                <div class="font-mono text-[0.75rem] text-outline uppercase">National TV &amp; Digital Ad</div>
+
+              <!-- Brand Card 3: FLIPKART -->
+              <div
+                class="group relative bg-white border border-outline-variant hover:border-accent-gold p-5 flex flex-col justify-between transition-all duration-300 shadow-sm hover:shadow-md hover:-translate-y-1">
+                <div class="flex flex-col gap-2">
+
+                  <h3
+                    class="font-display text-xl sm:text-[1.35rem] font-black text-primary uppercase tracking-tight group-hover:text-accent-gold transition-colors mt-1">
+                    FLIPKART
+                  </h3>
+                  <div class="font-sans font-extrabold text-sm text-primary tracking-wide">
+                    Director &amp; Photographer
+                  </div>
+                </div>
+                <div
+                  class="mt-4 pt-3 border-t border-outline-variant flex items-center justify-between font-mono text-xs">
+                  <span class="text-on-surface-variant text-[0.7rem] uppercase tracking-wider font-semibold">Big Billion
+                    Days / Digital</span>
+                </div>
+              </div>
+
+              <!-- Brand Card 4: AMAZON INDIA -->
+              <div
+                class="group relative bg-white border border-outline-variant hover:border-accent-gold p-5 flex flex-col justify-between transition-all duration-300 shadow-sm hover:shadow-md hover:-translate-y-1">
+                <div class="flex flex-col gap-2">
+
+                  <h3
+                    class="font-display text-xl sm:text-[1.35rem] font-black text-primary uppercase tracking-tight group-hover:text-accent-gold transition-colors mt-1">
+                    AMAZON INDIA
+                  </h3>
+                  <div class="font-sans font-extrabold text-sm text-primary tracking-wide">
+                    Commercial Photographer
+                  </div>
+                </div>
+                <div
+                  class="mt-4 pt-3 border-t border-outline-variant flex items-center justify-between font-mono text-xs">
+                  <span class="text-on-surface-variant text-[0.7rem] uppercase tracking-wider font-semibold">E-Commerce
+                    Campaign Stills</span>
+                </div>
               </div>
             </div>
           </div>
+
         </div>
       </section>
 
-      <!-- AI FILMS & SYNTHETIC MEDIA (PLAYABLE VIDEOS) -->
+      <!-- AI GENERATED FILMS & SYNTHETIC MEDIA -->
       <section class="w-full px-6 lg:px-12 py-16 bg-surface border-t border-outline-variant" id="ai-works">
-        <div class="max-w-7xl mx-auto flex flex-col gap-8">
+        <div class="max-w-7xl mx-auto flex flex-col gap-10">
           <div class="flex flex-col md:flex-row md:items-end justify-between border-b border-primary pb-3 gap-2">
             <div>
               <span class="font-mono text-[0.75rem] text-accent-gold uppercase tracking-[0.2em] font-medium">SYNTHETIC
                 MEDIA PIPELINE</span>
-              <h2 class="font-display text-[2.25rem] uppercase text-primary tracking-tight font-extrabold mt-0.5">AI
-                GENERATED FILMS</h2>
+              <h2 class="font-display text-[2.25rem] uppercase text-primary tracking-tight font-extrabold mt-0.5">
+                AI GENERATED FILMS
+              </h2>
             </div>
             <div class="font-mono text-[0.75rem] text-outline uppercase tracking-widest">
-              Runway Gen-3 • Midjourney • Pika
+              Runway Gen-3 • Midjourney • Pika • HeyGen
             </div>
           </div>
 
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
             <!-- Video 1: Netflix AD -->
-            <div class="flex flex-col bg-white border border-outline-variant overflow-hidden reveal-card shadow-sm">
+            <div
+              class="flex flex-col bg-white border border-outline-variant overflow-hidden video-card-hover reveal-card shadow-sm">
               <div
-                class="flex justify-between items-center px-3 py-2 border-b border-outline-variant bg-surface-container-low font-mono text-[0.75rem]">
+                class="flex justify-between items-center px-3 py-2 border-b border-outline-variant bg-surface-container-low font-mono text-[0.725rem]">
                 <span class="text-primary font-bold">NETFLIX SPEC</span>
-                <span class="text-accent-gold font-bold">AI VIDEO</span>
+                <span class="text-accent-gold font-bold">AI VIDEO PIPELINE</span>
               </div>
-              <div class="relative w-full aspect-video bg-black">
-                <video autoplay loop muted playsinline controls preload="metadata" class="w-full h-full object-cover">
+              <div class="relative w-full aspect-video bg-black group cursor-pointer"
+                onclick="openVideoModal('local', 'AI Work/Netflix AD.MP4', 'Netflix Spec — AI Concept Promo')">
+                <video muted playsinline class="w-full h-full object-cover">
                   <source src="AI%20Work/Netflix%20AD.MP4" type="video/mp4">
-                  Your browser does not support the video tag.
                 </video>
+                <div
+                  class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all flex items-center justify-center">
+                  <div class="relative flex items-center justify-center">
+                    <span
+                      class="absolute w-14 h-14 rounded-full bg-accent-gold/30 animate-ping pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                    <div
+                      class="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-neutral-950/80 backdrop-blur-md border border-accent-gold/60 text-accent-gold flex items-center justify-center shadow-2xl group-hover:scale-110 group-hover:bg-accent-gold group-hover:text-black group-hover:border-white transition-all duration-300">
+                      <svg class="w-5 h-5 sm:w-6 sm:h-6 fill-current ml-0.5" viewBox="0 0 24 24">
+                        <path d="M8 5v14l11-7z" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
               </div>
               <div class="p-3.5 bg-white">
-                <div class="font-display text-[1rem] uppercase text-primary font-extrabold">NETFLIX — CONCEPT PROMO
+                <div class="font-display text-[0.95rem] uppercase text-primary font-extrabold">NETFLIX — CONCEPT PROMO
                 </div>
+                <div class="font-mono text-[0.65rem] text-outline uppercase mt-0.5">Synthetic Cinema Direction</div>
               </div>
             </div>
 
             <!-- Video 2: Snickers -->
-            <div class="flex flex-col bg-white border border-outline-variant overflow-hidden reveal-card shadow-sm">
+            <div
+              class="flex flex-col bg-white border border-outline-variant overflow-hidden video-card-hover reveal-card shadow-sm">
               <div
-                class="flex justify-between items-center px-3 py-2 border-b border-outline-variant bg-surface-container-low font-mono text-[0.75rem]">
+                class="flex justify-between items-center px-3 py-2 border-b border-outline-variant bg-surface-container-low font-mono text-[0.725rem]">
                 <span class="text-primary font-bold">SNICKERS SPEC</span>
-                <span class="text-accent-gold font-bold">AI VIDEO</span>
+                <span class="text-accent-gold font-bold">AI VIDEO PIPELINE</span>
               </div>
-              <div class="relative w-full aspect-video bg-black">
-                <video autoplay loop muted playsinline controls preload="metadata" class="w-full h-full object-cover">
+              <div class="relative w-full aspect-video bg-black group cursor-pointer"
+                onclick="openVideoModal('local', 'AI Work/snickers ad.mp4', 'Snickers Spec — AI Ad Film')">
+                <video muted playsinline class="w-full h-full object-cover">
                   <source src="AI%20Work/snickers%20ad.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
                 </video>
+                <div
+                  class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all flex items-center justify-center">
+                  <div class="relative flex items-center justify-center">
+                    <span
+                      class="absolute w-14 h-14 rounded-full bg-accent-gold/30 animate-ping pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                    <div
+                      class="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-neutral-950/80 backdrop-blur-md border border-accent-gold/60 text-accent-gold flex items-center justify-center shadow-2xl group-hover:scale-110 group-hover:bg-accent-gold group-hover:text-black group-hover:border-white transition-all duration-300">
+                      <svg class="w-5 h-5 sm:w-6 sm:h-6 fill-current ml-0.5" viewBox="0 0 24 24">
+                        <path d="M8 5v14l11-7z" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
               </div>
               <div class="p-3.5 bg-white">
-                <div class="font-display text-[1rem] uppercase text-primary font-extrabold">SNICKERS — AI AD FILM</div>
+                <div class="font-display text-[0.95rem] uppercase text-primary font-extrabold">SNICKERS — AI AD FILM
+                </div>
+                <div class="font-mono text-[0.65rem] text-outline uppercase mt-0.5">Generative Motion Narrative</div>
               </div>
             </div>
 
             <!-- Video 3: Commercial -->
-            <div class="flex flex-col bg-white border border-outline-variant overflow-hidden reveal-card shadow-sm">
+            <div
+              class="flex flex-col bg-white border border-outline-variant overflow-hidden video-card-hover reveal-card shadow-sm">
               <div
-                class="flex justify-between items-center px-3 py-2 border-b border-outline-variant bg-surface-container-low font-mono text-[0.75rem]">
-                <span class="text-primary font-bold">COMMERCIAL</span>
-                <span class="text-accent-gold font-bold">AI VIDEO</span>
+                class="flex justify-between items-center px-3 py-2 border-b border-outline-variant bg-surface-container-low font-mono text-[0.725rem]">
+                <span class="text-primary font-bold">COMMERCIAL SPEC</span>
+                <span class="text-accent-gold font-bold">AI VIDEO PIPELINE</span>
               </div>
-              <div class="relative w-full aspect-video bg-black">
-                <video autoplay loop muted playsinline controls preload="metadata" class="w-full h-full object-cover">
+              <div class="relative w-full aspect-video bg-black group cursor-pointer"
+                onclick="openVideoModal('local', 'AI Work/Commercial.mp4', 'AI Brand Commercial')">
+                <video muted playsinline class="w-full h-full object-cover">
                   <source src="AI%20Work/Commercial.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
                 </video>
-              </div>
-              <div class="p-3.5 bg-white">
-                <div class="font-display text-[1rem] uppercase text-primary font-extrabold">AI BRAND COMMERCIAL</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- FEATURE FILMS BTS & PROMOS (PLAYABLE VIDEOS) -->
-      <section class="w-full px-6 lg:px-12 py-16 bg-surface-container-low border-t border-outline-variant" id="films">
-        <div class="max-w-7xl mx-auto flex flex-col gap-8">
-          <div class="flex flex-col md:flex-row md:items-end justify-between border-b border-primary pb-3 gap-2">
-            <div>
-              <span class="font-mono text-[0.75rem] text-accent-gold uppercase tracking-[0.2em] font-medium">THEATRICAL
-                ROLLOUTS</span>
-              <h2 class="font-display text-[2.25rem] uppercase text-primary tracking-tight font-extrabold mt-0.5">
-                FEATURE FILMS — MAKING &amp; BTS</h2>
-            </div>
-            <div class="font-mono text-[0.75rem] text-outline uppercase tracking-widest">
-              T-Series • RSVP • Zee Music • Fox Star
-            </div>
-          </div>
-
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <!-- Video 1: Raid -->
-            <div class="flex flex-col bg-white border border-outline-variant overflow-hidden reveal-card shadow-sm">
-              <div
-                class="flex justify-between items-center px-3 py-2 border-b border-outline-variant bg-surface-container-low font-mono text-[0.75rem]">
-                <span class="text-primary font-bold">RAID (2018)</span>
-                <span class="text-accent-gold font-bold">BTS DIRECTOR</span>
-              </div>
-              <div class="relative w-full aspect-video bg-black">
-                <video autoplay loop muted playsinline controls preload="metadata" class="w-full h-full object-cover">
-                  <source
-                    src="Video%20producer%20-%20Films/Making%20of%20Raid%20%20Ajay%20Devgn%20%20Ileana%20D_Cruz%20-%20T-Series%20(1080p,%20h264).mp4"
-                    type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-              <div class="p-3.5 bg-white">
-                <div class="font-display text-[1rem] uppercase text-primary font-extrabold">MAKING OF RAID — AJAY DEVGN
+                <div
+                  class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all flex items-center justify-center">
+                  <div class="relative flex items-center justify-center">
+                    <span
+                      class="absolute w-14 h-14 rounded-full bg-accent-gold/30 animate-ping pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                    <div
+                      class="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-neutral-950/80 backdrop-blur-md border border-accent-gold/60 text-accent-gold flex items-center justify-center shadow-2xl group-hover:scale-110 group-hover:bg-accent-gold group-hover:text-black group-hover:border-white transition-all duration-300">
+                      <svg class="w-5 h-5 sm:w-6 sm:h-6 fill-current ml-0.5" viewBox="0 0 24 24">
+                        <path d="M8 5v14l11-7z" />
+                      </svg>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-
-            <!-- Video 2: Paltan -->
-            <div class="flex flex-col bg-white border border-outline-variant overflow-hidden reveal-card shadow-sm">
-              <div
-                class="flex justify-between items-center px-3 py-2 border-b border-outline-variant bg-surface-container-low font-mono text-[0.75rem]">
-                <span class="text-primary font-bold">PALTAN (2018)</span>
-                <span class="text-accent-gold font-bold">BTS DIRECTOR</span>
-              </div>
-              <div class="relative w-full aspect-video bg-black">
-                <video autoplay loop muted playsinline controls preload="metadata" class="w-full h-full object-cover">
-                  <source
-                    src="Video%20producer%20-%20Films/Main%20Zinda%20Hoon%20-%20Making%20%20Paltan%20%20Javed%20Akhtar%20%20J%20P%20Dutta%20%20Releasing%20On%207th%20September%20-%20Zee%20Music%20Company%20(1080p,%20h264).mp4"
-                    type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-              </div>
               <div class="p-3.5 bg-white">
-                <div class="font-display text-[1rem] uppercase text-primary font-extrabold">MAKING OF PALTAN — J.P.
-                  DUTTA</div>
-              </div>
-            </div>
-
-            <!-- Video 3: Mard Ko Dard Nahi Hota -->
-            <div class="flex flex-col bg-white border border-outline-variant overflow-hidden reveal-card shadow-sm">
-              <div
-                class="flex justify-between items-center px-3 py-2 border-b border-outline-variant bg-surface-container-low font-mono text-[0.75rem]">
-                <span class="text-primary font-bold">MARD KO DARD NAHI HOTA</span>
-                <span class="text-accent-gold font-bold">ASSOCIATE PRODUCER</span>
-              </div>
-              <div class="relative w-full aspect-video bg-black">
-                <video autoplay loop muted playsinline controls preload="metadata" class="w-full h-full object-cover">
-                  <source
-                    src="Video%20producer%20-%20Films/Mard%20Ko%20Dard%20Nahi%20Hota%20%20Jimmy%20Vs.%20Mani%20%20Abhimanyu,%20Radhika,%20Gulshan%20%20Vasan%20%20In%20Cinemas%20-%20RSVP%20Movies%20(1080p,%20h264).mp4"
-                    type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-              <div class="p-3.5 bg-white">
-                <div class="font-display text-[1rem] uppercase text-primary font-extrabold">MARD KO DARD NAHI HOTA —
-                  RSVP</div>
+                <div class="font-display text-[0.95rem] uppercase text-primary font-extrabold">AI BRAND COMMERCIAL</div>
+                <div class="font-mono text-[0.65rem] text-outline uppercase mt-0.5">Midjourney &bull; Runway Gen-3</div>
               </div>
             </div>
           </div>
@@ -442,34 +1223,55 @@
       </section>
 
       <!-- FILM POSTERS & KEY ART GALLERY -->
-      <section class="w-full px-6 lg:px-12 py-16 bg-surface border-t border-outline-variant" id="posters">
-        <div class="max-w-7xl mx-auto flex flex-col gap-8">
+      <section class="w-full px-6 lg:px-12 py-16 bg-surface-container-low border-t border-outline-variant" id="posters">
+        <div class="max-w-7xl mx-auto flex flex-col gap-10">
           <div class="flex flex-col md:flex-row md:items-end justify-between border-b border-primary pb-3 gap-2">
             <div>
               <span class="font-mono text-[0.75rem] text-accent-gold uppercase tracking-[0.2em] font-medium">MARKETING
                 &amp; KEY ART</span>
-              <h2 class="font-display text-[2.25rem] uppercase text-primary tracking-tight font-extrabold mt-0.5">FILM
-                POSTERS &amp; GALLERY</h2>
+              <h2 class="font-display text-[2.25rem] uppercase text-primary tracking-tight font-extrabold mt-0.5">
+                FILM POSTERS &amp; GALLERY
+              </h2>
             </div>
-
+            <div class="font-mono text-[0.75rem] text-outline uppercase tracking-widest">
+              Theatrical Releases • OTT Originals • Key Visuals
+            </div>
           </div>
 
           <!-- Pinterest Style Masonry Columns -->
           <div class="columns-2 sm:columns-3 md:columns-4 lg:columns-5 gap-4 space-y-4">
+            <!-- Poster 1: Raid -->
             <div
-              class="break-inside-avoid relative group overflow-hidden border border-outline-variant bg-neutral-900 reveal-card shadow-sm hover:shadow-xl transition-all duration-300">
+              class="break-inside-avoid relative group overflow-hidden border border-outline-variant bg-neutral-900 reveal-card shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer"
+              onclick="openImageModal('Film Poster/MV5BMTRlZThlOWUtYjcxYy00NmQwLTgzOTktYzU2OGU1ODJmZGQ3XkEyXkFqcGc@._V1_.jpg', 'Raid (2018) — Official Poster')">
               <img src="Film%20Poster/MV5BMTRlZThlOWUtYjcxYy00NmQwLTgzOTktYzU2OGU1ODJmZGQ3XkEyXkFqcGc@._V1_.jpg"
                 alt="Raid Official Poster"
                 class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500">
               <div
                 class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-3 flex flex-col justify-end">
                 <span class="font-display font-extrabold text-white text-xs uppercase">RAID (2018)</span>
-                <span class="font-mono text-[0.6rem] text-accent-gold uppercase">T-Series • Key Art</span>
+                <span class="font-mono text-[0.6rem] text-accent-gold uppercase">Ajay Devgn &bull; T-Series</span>
               </div>
             </div>
 
+            <!-- Poster 2: Singlehood Series -->
             <div
-              class="break-inside-avoid relative group overflow-hidden border border-outline-variant bg-neutral-900 reveal-card shadow-sm hover:shadow-xl transition-all duration-300">
+              class="break-inside-avoid relative group overflow-hidden border border-outline-variant bg-neutral-900 reveal-card shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer"
+              onclick="openImageModal('singlehood.png', 'Singlehood — Watcho Original Series')">
+              <img src="singlehood.png" alt="Singlehood Watcho Original"
+                class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500">
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-3 flex flex-col justify-end">
+                <span class="font-display font-extrabold text-white text-xs uppercase">SINGLEHOOD (TV SERIES)</span>
+                <span class="font-mono text-[0.6rem] text-accent-gold uppercase">Producer &bull; Creative
+                  Director</span>
+              </div>
+            </div>
+
+            <!-- Poster 3: Bhuj -->
+            <div
+              class="break-inside-avoid relative group overflow-hidden border border-outline-variant bg-neutral-900 reveal-card shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer"
+              onclick="openImageModal('Film Poster/MV5BMWE5Nzg2M2MtOTY0NS00MzZmLWJlMzktODUxYWEwM2IwNzA5XkEyXkFqcGc@._V1_.jpg', 'Bhuj: The Pride of India — Disney+ Hotstar')">
               <img src="Film%20Poster/MV5BMWE5Nzg2M2MtOTY0NS00MzZmLWJlMzktODUxYWEwM2IwNzA5XkEyXkFqcGc@._V1_.jpg"
                 alt="Bhuj Official Poster"
                 class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500">
@@ -480,8 +1282,10 @@
               </div>
             </div>
 
+            <!-- Poster 4: India's Most Wanted -->
             <div
-              class="break-inside-avoid relative group overflow-hidden border border-outline-variant bg-neutral-900 reveal-card shadow-sm hover:shadow-xl transition-all duration-300">
+              class="break-inside-avoid relative group overflow-hidden border border-outline-variant bg-neutral-900 reveal-card shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer"
+              onclick="openImageModal('Film Poster/MV5BMzFmNGIwYjYtY2M2ZC00M2Q5LWI5NTAtMDQxZDZhNzdlYWFkXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg', 'India\'s Most Wanted — Fox Star Studios')">
               <img
                 src="Film%20Poster/MV5BMzFmNGIwYjYtY2M2ZC00M2Q5LWI5NTAtMDQxZDZhNzdlYWFkXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
                 alt="India's Most Wanted Poster"
@@ -493,20 +1297,24 @@
               </div>
             </div>
 
+            <!-- Poster 5: Mard Ko Dard Nahi Hota -->
             <div
-              class="break-inside-avoid relative group overflow-hidden border border-outline-variant bg-neutral-900 reveal-card shadow-sm hover:shadow-xl transition-all duration-300">
+              class="break-inside-avoid relative group overflow-hidden border border-outline-variant bg-neutral-900 reveal-card shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer"
+              onclick="openImageModal('Film Poster/MV5BNGY1YTBiMWMtZDRjNi00ZWE2LWJiZDgtZWY3Y2YzMDVlMzg5XkEyXkFqcGc@._V1_.jpg', 'Mard Ko Dard Nahi Hota — RSVP Films')">
               <img src="Film%20Poster/MV5BNGY1YTBiMWMtZDRjNi00ZWE2LWJiZDgtZWY3Y2YzMDVlMzg5XkEyXkFqcGc@._V1_.jpg"
                 alt="Mard Ko Dard Nahi Hota Poster"
                 class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500">
               <div
                 class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-3 flex flex-col justify-end">
                 <span class="font-display font-extrabold text-white text-xs uppercase">MARD KO DARD NAHI HOTA</span>
-                <span class="font-mono text-[0.6rem] text-accent-gold uppercase">RSVP Films • TIFF Winner</span>
+                <span class="font-mono text-[0.6rem] text-accent-gold uppercase">RSVP &bull; TIFF Winner</span>
               </div>
             </div>
 
+            <!-- Poster 6: Paltan -->
             <div
-              class="break-inside-avoid relative group overflow-hidden border border-outline-variant bg-neutral-900 reveal-card shadow-sm hover:shadow-xl transition-all duration-300">
+              class="break-inside-avoid relative group overflow-hidden border border-outline-variant bg-neutral-900 reveal-card shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer"
+              onclick="openImageModal('Film Poster/MV5BZDI2MzQyOGMtY2FiYy00NDgzLWExOTYtZGIwOWU3YTI3MTU5XkEyXkFqcGc@._V1_.jpg', 'Paltan (2018) — J.P. Dutta')">
               <img src="Film%20Poster/MV5BZDI2MzQyOGMtY2FiYy00NDgzLWExOTYtZGIwOWU3YTI3MTU5XkEyXkFqcGc@._V1_.jpg"
                 alt="Paltan Official Poster"
                 class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500">
@@ -517,55 +1325,52 @@
               </div>
             </div>
 
+            <!-- Poster 7: Operation Parindey (YouTube Thumbnail Key Art) -->
             <div
-              class="break-inside-avoid relative group overflow-hidden border border-outline-variant bg-neutral-900 reveal-card shadow-sm hover:shadow-xl transition-all duration-300">
+              class="break-inside-avoid relative group overflow-hidden border border-outline-variant bg-neutral-900 reveal-card shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer"
+              onclick="openVideoModal('yt', '6zXXbIk4U3Q', 'Operation Parindey — ZEE5 Original')">
+              <img src="https://img.youtube.com/vi/6zXXbIk4U3Q/hqdefault.jpg" alt="Operation Parindey Key Art"
+                class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500">
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-3 flex flex-col justify-end">
+                <span class="font-display font-extrabold text-white text-xs uppercase">OPERATION PARINDEY</span>
+                <span class="font-mono text-[0.6rem] text-accent-gold uppercase">Amit Sadh &bull; ZEE5 Original</span>
+              </div>
+            </div>
+
+            <!-- Poster 8: Chasani Key Art -->
+            <div
+              class="break-inside-avoid relative group overflow-hidden border border-outline-variant bg-neutral-900 reveal-card shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer"
+              onclick="openVideoModal('yt', '_IM6hValJy4', 'Chasani — Gujarati Feature Film')">
+              <img src="https://img.youtube.com/vi/_IM6hValJy4/hqdefault.jpg" alt="Chasani Key Art"
+                class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500">
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-3 flex flex-col justify-end">
+                <span class="font-display font-extrabold text-white text-xs uppercase">CHASANI (2019)</span>
+                <span class="font-mono text-[0.6rem] text-accent-gold uppercase">Manoj Joshi &bull; Feature Film</span>
+              </div>
+            </div>
+
+            <!-- Poster 9: Production Stills & Key Visuals -->
+            <div
+              class="break-inside-avoid relative group overflow-hidden border border-outline-variant bg-neutral-900 reveal-card shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer"
+              onclick="openImageModal('Film Poster/28225b01-251d-4286-bf57-83d7f81e9934.jpeg', 'Film Campaign Still')">
               <img src="Film%20Poster/28225b01-251d-4286-bf57-83d7f81e9934.jpeg" alt="Poster Key Art"
                 class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500">
               <div
                 class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-3 flex flex-col justify-end">
-                <span class="font-display font-extrabold text-white text-xs uppercase">FILM CAMPAIGN STILL</span>
-                <span class="font-mono text-[0.6rem] text-accent-gold uppercase">Key Visual Asset</span>
+                <span class="font-display font-extrabold text-white text-xs uppercase">PRODUCTION STILL</span>
+                <span class="font-mono text-[0.6rem] text-accent-gold uppercase">Cinematic Asset</span>
               </div>
             </div>
 
+            <!-- Poster 10: Theatrical High Res -->
             <div
-              class="break-inside-avoid relative group overflow-hidden border border-outline-variant bg-neutral-900 reveal-card shadow-sm hover:shadow-xl transition-all duration-300">
+              class="break-inside-avoid relative group overflow-hidden border border-outline-variant bg-neutral-900 reveal-card shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer"
+              onclick="openImageModal('Film Poster/51164323da3ff999e2cd255aefca41130cdfccd7eb8936031e50ffffb8362667._SX1080_FMjpg_.jpg', 'Theatrical Key Art')">
               <img
                 src="Film%20Poster/51164323da3ff999e2cd255aefca41130cdfccd7eb8936031e50ffffb8362667._SX1080_FMjpg_.jpg"
                 alt="Poster Key Art High Res"
-                class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500">
-              <div
-                class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-3 flex flex-col justify-end">
-                <span class="font-display font-extrabold text-white text-xs uppercase">THEATRICAL POSTER</span>
-                <span class="font-mono text-[0.6rem] text-accent-gold uppercase">Promotional Art</span>
-              </div>
-            </div>
-
-            <div
-              class="break-inside-avoid relative group overflow-hidden border border-outline-variant bg-neutral-900 reveal-card shadow-sm hover:shadow-xl transition-all duration-300">
-              <img src="Film%20Poster/7627f499-e6a7-41b3-992f-71afea582947.jpeg" alt="Film Production Still"
-                class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500">
-              <div
-                class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-3 flex flex-col justify-end">
-                <span class="font-display font-extrabold text-white text-xs uppercase">CAMPAIGN VISUAL</span>
-                <span class="font-mono text-[0.6rem] text-accent-gold uppercase">Marketing Unit</span>
-              </div>
-            </div>
-
-            <div
-              class="break-inside-avoid relative group overflow-hidden border border-outline-variant bg-neutral-900 reveal-card shadow-sm hover:shadow-xl transition-all duration-300">
-              <img src="Film%20Poster/9c676826-afd3-412b-b5fa-32b89f75f789.jpeg" alt="Film Campaign Graphic"
-                class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500">
-              <div
-                class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-3 flex flex-col justify-end">
-                <span class="font-display font-extrabold text-white text-xs uppercase">KEY VISUAL GRAPHIC</span>
-                <span class="font-mono text-[0.6rem] text-accent-gold uppercase">Promotional EPK</span>
-              </div>
-            </div>
-
-            <div
-              class="break-inside-avoid relative group overflow-hidden border border-outline-variant bg-neutral-900 reveal-card shadow-sm hover:shadow-xl transition-all duration-300">
-              <img src="Film%20Poster/bf87b3be-9c2b-4c72-9991-cbec294b33a7.jpeg" alt="Film Campaign Asset"
                 class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500">
               <div
                 class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-3 flex flex-col justify-end">
@@ -573,102 +1378,289 @@
                 <span class="font-mono text-[0.6rem] text-accent-gold uppercase">Official Print</span>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
 
+      <!-- COMPREHENSIVE FILMOGRAPHY & CAREER LEDGER -->
+      <section class="w-full px-6 lg:px-12 py-16 bg-surface border-t border-outline-variant" id="filmography">
+        <div class="max-w-7xl mx-auto flex flex-col gap-10">
+          <div class="flex items-baseline justify-between border-b border-primary pb-3">
+            <div>
+              <span class="font-mono text-[0.75rem] text-accent-gold uppercase tracking-[0.2em] font-medium">COMPLETE
+                RECORD</span>
+              <h2 class="font-display text-[2.25rem] uppercase text-primary font-extrabold mt-0.5">FILMOGRAPHY &amp;
+                PRODUCTIONS</h2>
+            </div>
+            <span class="font-mono text-[0.75rem] text-accent-gold font-bold uppercase hidden sm:inline">12+ YRS &bull;
+              ZERO OVERRUNS</span>
+          </div>
+
+          <div class="flex flex-col border-t border-outline-variant divide-y divide-outline-variant font-sans">
+            <!-- Row 1: Singlehood -->
             <div
-              class="break-inside-avoid relative group overflow-hidden border border-outline-variant bg-neutral-900 reveal-card shadow-sm hover:shadow-xl transition-all duration-300">
-              <img src="Film%20Poster/images.jpeg" alt="Film Campaign Stills"
-                class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500">
-              <div
-                class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-3 flex flex-col justify-end">
-                <span class="font-display font-extrabold text-white text-xs uppercase">POSTER STILL</span>
-                <span class="font-mono text-[0.6rem] text-accent-gold uppercase">Digital Rollout</span>
+              class="py-4 grid grid-cols-12 gap-2 items-center reveal-row hover:bg-surface-container-low transition-colors px-2">
+              <div class="col-span-1 font-mono text-xs text-accent-gold font-bold">01</div>
+              <div class="col-span-11 sm:col-span-4 flex flex-col">
+                <span class="font-display text-base uppercase text-primary font-bold">SINGLEHOOD (TV SERIES)</span>
+                <span class="font-mono text-[0.65rem] text-outline">Watcho / Dish TV Original Show</span>
+              </div>
+              <div class="col-span-6 sm:col-span-4 font-mono text-xs text-on-surface-variant uppercase mt-1 sm:mt-0">
+                Original Web Series &bull; Multi-Camera
+              </div>
+              <div class="col-span-6 sm:col-span-3 font-mono text-xs text-primary font-bold uppercase text-right">
+                Producer &amp; Creative Director
+              </div>
+            </div>
+
+            <!-- Row 2: Raid -->
+            <div
+              class="py-4 grid grid-cols-12 gap-2 items-center reveal-row hover:bg-surface-container-low transition-colors px-2">
+              <div class="col-span-1 font-mono text-xs text-accent-gold font-bold">02</div>
+              <div class="col-span-11 sm:col-span-4 flex flex-col">
+                <span class="font-display text-base uppercase text-primary font-bold">RAID (2018)</span>
+                <span class="font-mono text-[0.65rem] text-outline">T-Series &bull; Rs. 290 Cr Box Office</span>
+              </div>
+              <div class="col-span-6 sm:col-span-4 font-mono text-xs text-on-surface-variant uppercase mt-1 sm:mt-0">
+                Ajay Devgn &bull; Ileana D'Cruz
+              </div>
+              <div class="col-span-6 sm:col-span-3 font-mono text-xs text-primary font-bold uppercase text-right">
+                BTS Director / EPK
+              </div>
+            </div>
+
+            <!-- Row 3: Bhuj -->
+            <div
+              class="py-4 grid grid-cols-12 gap-2 items-center reveal-row hover:bg-surface-container-low transition-colors px-2">
+              <div class="col-span-1 font-mono text-xs text-accent-gold font-bold">03</div>
+              <div class="col-span-11 sm:col-span-4 flex flex-col">
+                <span class="font-display text-base uppercase text-primary font-bold">BHUJ: THE PRIDE OF INDIA
+                  (2021)</span>
+                <span class="font-mono text-[0.65rem] text-outline">Disney+ Hotstar &bull; T-Series</span>
+              </div>
+              <div class="col-span-6 sm:col-span-4 font-mono text-xs text-on-surface-variant uppercase mt-1 sm:mt-0">
+                Ajay Devgn, Sanjay Dutt, Sonakshi Sinha
+              </div>
+              <div class="col-span-6 sm:col-span-3 font-mono text-xs text-primary font-bold uppercase text-right">
+                BTS Director / EPK
+              </div>
+            </div>
+
+            <!-- Row 4: India's Most Wanted -->
+            <div
+              class="py-4 grid grid-cols-12 gap-2 items-center reveal-row hover:bg-surface-container-low transition-colors px-2">
+              <div class="col-span-1 font-mono text-xs text-accent-gold font-bold">04</div>
+              <div class="col-span-11 sm:col-span-4 flex flex-col">
+                <span class="font-display text-base uppercase text-primary font-bold">INDIA'S MOST WANTED (2019)</span>
+                <span class="font-mono text-[0.65rem] text-outline">Fox Star Studios &bull; Raj Kumar Gupta</span>
+              </div>
+              <div class="col-span-6 sm:col-span-4 font-mono text-xs text-on-surface-variant uppercase mt-1 sm:mt-0">
+                Arjun Kapoor
+              </div>
+              <div class="col-span-6 sm:col-span-3 font-mono text-xs text-primary font-bold uppercase text-right">
+                Lead BTS Producer
+              </div>
+            </div>
+
+            <!-- Row 5: Mard Ko Dard Nahi Hota -->
+            <div
+              class="py-4 grid grid-cols-12 gap-2 items-center reveal-row hover:bg-surface-container-low transition-colors px-2">
+              <div class="col-span-1 font-mono text-xs text-accent-gold font-bold">05</div>
+              <div class="col-span-11 sm:col-span-4 flex flex-col">
+                <span class="font-display text-base uppercase text-primary font-bold">MARD KO DARD NAHI HOTA
+                  (2018)</span>
+                <span class="font-mono text-[0.65rem] text-outline">RSVP Movies &bull; TIFF Midnight Madness
+                  Winner</span>
+              </div>
+              <div class="col-span-6 sm:col-span-4 font-mono text-xs text-on-surface-variant uppercase mt-1 sm:mt-0">
+                Abhimanyu Dassani, Radhika Madan
+              </div>
+              <div class="col-span-6 sm:col-span-3 font-mono text-xs text-primary font-bold uppercase text-right">
+                BTS Director
+              </div>
+            </div>
+
+            <!-- Row 6: Paltan -->
+            <div
+              class="py-4 grid grid-cols-12 gap-2 items-center reveal-row hover:bg-surface-container-low transition-colors px-2">
+              <div class="col-span-1 font-mono text-xs text-accent-gold font-bold">06</div>
+              <div class="col-span-11 sm:col-span-4 flex flex-col">
+                <span class="font-display text-base uppercase text-primary font-bold">PALTAN (2018)</span>
+                <span class="font-mono text-[0.65rem] text-outline">J.P. Dutta Films &bull; Zee Music</span>
+              </div>
+              <div class="col-span-6 sm:col-span-4 font-mono text-xs text-on-surface-variant uppercase mt-1 sm:mt-0">
+                Jackie Shroff, Arjun Rampal, Sonu Sood
+              </div>
+              <div class="col-span-6 sm:col-span-3 font-mono text-xs text-primary font-bold uppercase text-right">
+                BTS Director
+              </div>
+            </div>
+
+            <!-- Row 7: Operation Parindey -->
+            <div
+              class="py-4 grid grid-cols-12 gap-2 items-center reveal-row hover:bg-surface-container-low transition-colors px-2">
+              <div class="col-span-1 font-mono text-xs text-accent-gold font-bold">07</div>
+              <div class="col-span-11 sm:col-span-4 flex flex-col">
+                <span class="font-display text-base uppercase text-primary font-bold">OPERATION PARINDEY (2020)</span>
+                <span class="font-mono text-[0.65rem] text-outline">ZEE5 Original Feature Film</span>
+              </div>
+              <div class="col-span-6 sm:col-span-4 font-mono text-xs text-on-surface-variant uppercase mt-1 sm:mt-0">
+                Amit Sadh, Rahul Dev &bull; Sanjay Gadhvi
+              </div>
+              <div class="col-span-6 sm:col-span-3 font-mono text-xs text-primary font-bold uppercase text-right">
+                Content Producer
+              </div>
+            </div>
+
+            <!-- Row 8: Chasani -->
+            <div
+              class="py-4 grid grid-cols-12 gap-2 items-center reveal-row hover:bg-surface-container-low transition-colors px-2">
+              <div class="col-span-1 font-mono text-xs text-accent-gold font-bold">08</div>
+              <div class="col-span-11 sm:col-span-4 flex flex-col">
+                <span class="font-display text-base uppercase text-primary font-bold">CHASANI (2019)</span>
+                <span class="font-mono text-[0.65rem] text-outline">Gujarati Feature Film</span>
+              </div>
+              <div class="col-span-6 sm:col-span-4 font-mono text-xs text-on-surface-variant uppercase mt-1 sm:mt-0">
+                Manoj Joshi, Sejal Shah
+              </div>
+              <div class="col-span-6 sm:col-span-3 font-mono text-xs text-primary font-bold uppercase text-right">
+                Associate Producer
+              </div>
+            </div>
+
+            <!-- Row 9: Woh Bhi Din The -->
+            <div
+              class="py-4 grid grid-cols-12 gap-2 items-center reveal-row hover:bg-surface-container-low transition-colors px-2">
+              <div class="col-span-1 font-mono text-xs text-accent-gold font-bold">09</div>
+              <div class="col-span-11 sm:col-span-4 flex flex-col">
+                <span class="font-display text-base uppercase text-primary font-bold">WOH BHI DIN THE</span>
+                <span class="font-mono text-[0.65rem] text-outline">JA Entertainment (John Abraham) &bull; Rel.
+                  2024</span>
+              </div>
+              <div class="col-span-6 sm:col-span-4 font-mono text-xs text-on-surface-variant uppercase mt-1 sm:mt-0">
+                Rohit Saraf, Adarsh Gourav, Sanjana Sanghi
+              </div>
+              <div class="col-span-6 sm:col-span-3 font-mono text-xs text-primary font-bold uppercase text-right">
+                Assistant Director
+              </div>
+            </div>
+
+            <!-- Row 10: Television & Earlier Works -->
+            <div
+              class="py-4 grid grid-cols-12 gap-2 items-center reveal-row hover:bg-surface-container-low transition-colors px-2">
+              <div class="col-span-1 font-mono text-xs text-accent-gold font-bold">10</div>
+              <div class="col-span-11 sm:col-span-4 flex flex-col">
+                <span class="font-display text-base uppercase text-primary font-bold">BADE ACCHE LAGTE HAI &amp;
+                  TVCs</span>
+                <span class="font-mono text-[0.65rem] text-outline">Sony TV &bull; National Commercials
+                  (2013&ndash;2016)</span>
+              </div>
+              <div class="col-span-6 sm:col-span-4 font-mono text-xs text-on-surface-variant uppercase mt-1 sm:mt-0">
+                Balaji Telefilms / National Broadcast
+              </div>
+              <div class="col-span-6 sm:col-span-3 font-mono text-xs text-primary font-bold uppercase text-right">
+                Assistant Director
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- FILMOGRAPHY TABLE -->
-      <section class="w-full px-6 lg:px-12 py-16 bg-surface-container-low border-t border-outline-variant" id="credits">
-        <div class="max-w-7xl mx-auto flex flex-col gap-8">
-          <div class="flex items-baseline justify-between border-b border-primary pb-3">
-            <h2 class="font-display text-[2rem] uppercase text-primary font-extrabold">FILMOGRAPHY</h2>
-            <span class="font-mono text-[0.75rem] text-accent-gold font-bold uppercase">7 FEATURE FILMS</span>
+      <!-- SKILLS, DISCIPLINE & PRODUCTION MASTERY -->
+      <section class="w-full px-6 lg:px-12 py-16 bg-surface-container-low border-t border-outline-variant">
+        <div class="max-w-7xl mx-auto flex flex-col gap-10">
+          <div class="border-b border-primary pb-3">
+            <span class="font-mono text-[0.75rem] text-accent-gold uppercase tracking-[0.2em] font-medium">CORE
+              COMPETENCIES</span>
+            <h2 class="font-display text-[2.25rem] uppercase text-primary font-extrabold mt-0.5">TECHNICAL &amp;
+              PRODUCTION SKILLS</h2>
           </div>
 
-          <div class="flex flex-col border-t border-outline-variant divide-y divide-outline-variant font-sans">
-            <div class="py-3.5 grid grid-cols-12 gap-2 items-center reveal-row">
-              <div class="col-span-1 font-mono text-[0.75rem] text-accent-gold font-bold">01</div>
-              <div class="col-span-4 font-display text-[1rem] uppercase text-primary font-bold">RAID (2018)</div>
-              <div class="col-span-4 font-mono text-[0.75rem] text-on-surface-variant uppercase">Ajay Devgn · T-Series
-                (Rs 290 Cr)</div>
-              <div class="col-span-3 font-mono text-[0.75rem] text-outline uppercase text-right">BTS Director</div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Skill 1 -->
+            <div class="bg-white border border-outline-variant p-6 flex flex-col gap-3">
+              <div class="font-mono text-xs text-accent-gold font-bold uppercase">01 // EXECUTION</div>
+              <h3 class="font-display text-lg uppercase font-bold text-primary">PRODUCTION MANAGEMENT</h3>
+              <p class="font-sans text-xs text-on-surface-variant leading-relaxed">
+                Full brief-to-final-delivery lifecycle management across live sets, international crews, multi-location
+                logistics, and strict deadline deliverables.
+              </p>
             </div>
-            <div class="py-3.5 grid grid-cols-12 gap-2 items-center reveal-row">
-              <div class="col-span-1 font-mono text-[0.75rem] text-accent-gold font-bold">02</div>
-              <div class="col-span-4 font-display text-[1rem] uppercase text-primary font-bold">BHUJ: THE PRIDE OF INDIA
-                (2021)</div>
-              <div class="col-span-4 font-mono text-[0.75rem] text-on-surface-variant uppercase">Ajay Devgn, Sanjay Dutt
-                · Disney+</div>
-              <div class="col-span-3 font-mono text-[0.75rem] text-outline uppercase text-right">BTS Director / EPK
-              </div>
+
+            <!-- Skill 2 -->
+            <div class="bg-white border border-outline-variant p-6 flex flex-col gap-3">
+              <div class="font-mono text-xs text-accent-gold font-bold uppercase">02 // FINANCIAL</div>
+              <h3 class="font-display text-lg uppercase font-bold text-primary">BUDGET MASTERY (ZERO OVERRUNS)</h3>
+              <p class="font-sans text-xs text-on-surface-variant leading-relaxed">
+                4-year pristine track record with Tokyo corporate &mdash; zero cost overruns, rigorous line-item
+                accounting, and uncompromising fiscal discipline.
+              </p>
             </div>
-            <div class="py-3.5 grid grid-cols-12 gap-2 items-center reveal-row">
-              <div class="col-span-1 font-mono text-[0.75rem] text-accent-gold font-bold">03</div>
-              <div class="col-span-4 font-display text-[1rem] uppercase text-primary font-bold">INDIA'S MOST WANTED
-                (2019)</div>
-              <div class="col-span-4 font-mono text-[0.75rem] text-on-surface-variant uppercase">Arjun Kapoor · Fox Star
-                Studios</div>
-              <div class="col-span-3 font-mono text-[0.75rem] text-outline uppercase text-right">Lead BTS Producer</div>
+
+            <!-- Skill 3 -->
+            <div class="bg-white border border-outline-variant p-6 flex flex-col gap-3">
+              <div class="font-mono text-xs text-accent-gold font-bold uppercase">03 // DIRECTING</div>
+              <h3 class="font-display text-lg uppercase font-bold text-primary">DIRECTION &amp; EPK DOCUMENTARY</h3>
+              <p class="font-sans text-xs text-on-surface-variant leading-relaxed">
+                Pre-production storyboarding to final cut. Actor directing, high-profile celebrity handling (Ajay Devgn,
+                Arjun Kapoor, Amit Sadh), and promotional making.
+              </p>
             </div>
-            <div class="py-3.5 grid grid-cols-12 gap-2 items-center reveal-row">
-              <div class="col-span-1 font-mono text-[0.75rem] text-accent-gold font-bold">04</div>
-              <div class="col-span-4 font-display text-[1rem] uppercase text-primary font-bold">MARD KO DARD NAHI HOTA
-                (2018)</div>
-              <div class="col-span-4 font-mono text-[0.75rem] text-on-surface-variant uppercase">RSVP Films · TIFF
-                Winner</div>
-              <div class="col-span-3 font-mono text-[0.75rem] text-outline uppercase text-right">BTS Director</div>
+
+            <!-- Skill 4 -->
+            <div class="bg-white border border-outline-variant p-6 flex flex-col gap-3">
+              <div class="font-mono text-xs text-accent-gold font-bold uppercase">04 // CAMERA &amp; LIGHTING</div>
+              <h3 class="font-display text-lg uppercase font-bold text-primary">CINEMATOGRAPHY &amp; STILLS</h3>
+              <p class="font-sans text-xs text-on-surface-variant leading-relaxed">
+                DOP camera operations, lighting setups for high fashion (L'Oréal, Tanishq), commercial ad stills for
+                Flipkart/Amazon, and on-set documentary framing.
+              </p>
             </div>
-            <div class="py-3.5 grid grid-cols-12 gap-2 items-center reveal-row">
-              <div class="col-span-1 font-mono text-[0.75rem] text-accent-gold font-bold">05</div>
-              <div class="col-span-4 font-display text-[1rem] uppercase text-primary font-bold">PALTAN (2018)</div>
-              <div class="col-span-4 font-mono text-[0.75rem] text-on-surface-variant uppercase">Arjun Rampal, Sonu Sood
-                · Zee Music</div>
-              <div class="col-span-3 font-mono text-[0.75rem] text-outline uppercase text-right">BTS Director</div>
+
+            <!-- Skill 5 -->
+            <div class="bg-white border border-outline-variant p-6 flex flex-col gap-3">
+              <div class="font-mono text-xs text-accent-gold font-bold uppercase">05 // POST-PRODUCTION</div>
+              <h3 class="font-display text-lg uppercase font-bold text-primary">EDITING &amp; COLOR GRADING</h3>
+              <p class="font-sans text-xs text-on-surface-variant leading-relaxed">
+                Advanced proficiency across DaVinci Resolve, Adobe Premiere Pro, and Final Cut Pro for rhythm-driven
+                edits, sound design, and color pipelines.
+              </p>
             </div>
-            <div class="py-3.5 grid grid-cols-12 gap-2 items-center reveal-row">
-              <div class="col-span-1 font-mono text-[0.75rem] text-accent-gold font-bold">06</div>
-              <div class="col-span-4 font-display text-[1rem] uppercase text-primary font-bold">OPERATION PARINDEY
-                (2019)</div>
-              <div class="col-span-4 font-mono text-[0.75rem] text-on-surface-variant uppercase">Amit Sadh · ZEE5
-                Original</div>
-              <div class="col-span-3 font-mono text-[0.75rem] text-outline uppercase text-right">Content Producer</div>
-            </div>
-            <div class="py-3.5 grid grid-cols-12 gap-2 items-center reveal-row">
-              <div class="col-span-1 font-mono text-[0.75rem] text-accent-gold font-bold">07</div>
-              <div class="col-span-4 font-display text-[1rem] uppercase text-primary font-bold">WOH BHI DIN THE (2014)
-              </div>
-              <div class="col-span-4 font-mono text-[0.75rem] text-on-surface-variant uppercase">JA Entertainment (Rel.
-                2024)</div>
-              <div class="col-span-3 font-mono text-[0.75rem] text-outline uppercase text-right">Assistant Director
-              </div>
+
+            <!-- Skill 6 -->
+            <div class="bg-white border border-outline-variant p-6 flex flex-col gap-3">
+              <div class="font-mono text-xs text-accent-gold font-bold uppercase">06 // FUTURE PIPELINE</div>
+              <h3 class="font-display text-lg uppercase font-bold text-primary">AI &amp; SYNTHETIC VIDEO WORKFLOWS</h3>
+              <p class="font-sans text-xs text-on-surface-variant leading-relaxed">
+                Next-gen generative AI prompting and motion pipelines utilizing Runway Gen-3, Pika, Midjourney, and
+                HeyGen for rapid prototyping and synthetic visuals.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
       <!-- CONTACT STRIP -->
-      <section class="w-full px-6 lg:px-12 py-16 bg-surface border-t border-outline-variant" id="contact">
-        <div class="max-w-4xl mx-auto flex flex-col items-center text-center gap-4">
-          <span class="font-mono text-[0.75rem] text-accent-gold uppercase tracking-[0.2em] font-medium">CONNECT</span>
-          <h3 class="font-display text-[2.25rem] uppercase text-primary font-extrabold">LET'S WORK TOGETHER</h3>
-          <div class="flex flex-wrap justify-center gap-4 font-mono text-[0.75rem] text-outline uppercase">
+      <section class="w-full px-6 lg:px-12 py-20 bg-surface border-t border-outline-variant" id="contact">
+        <div class="max-w-4xl mx-auto flex flex-col items-center text-center gap-5">
+          <span
+            class="font-mono text-[0.75rem] text-accent-gold uppercase tracking-[0.2em] font-medium">COLLABORATE</span>
+          <h3 class="font-display text-[2.5rem] sm:text-[3rem] uppercase text-primary font-black">LET'S CREATE CINEMA
+          </h3>
+          <p class="font-sans text-sm sm:text-base text-on-surface-variant max-w-xl">
+            Available for feature film BTS direction, commercial campaigns, creative production, and international
+            project consultation.
+          </p>
+          <div class="flex flex-wrap justify-center gap-4 font-mono text-xs text-outline uppercase mt-1">
             <span>Bangalore, India</span>
-            <span>•</span>
+            <span>&bull;</span>
             <span>Tokyo, Japan</span>
+            <span>&bull;</span>
+            <span>Worldwide</span>
           </div>
-          <div class="flex flex-col sm:flex-row items-center gap-4 mt-2">
-            <a class="px-6 py-3 bg-white border border-outline-variant hover:border-primary text-primary font-mono text-[0.75rem] uppercase tracking-widest transition-colors flex items-center gap-2 shadow-sm"
+
+          <div class="flex flex-col sm:flex-row items-center gap-4 mt-4">
+            <a class="px-7 py-3.5 bg-primary text-white hover:bg-neutral-800 font-mono text-xs uppercase tracking-widest transition-colors flex items-center gap-2 shadow-md"
               href="mailto:sovbidrahul@gmail.com">
               <svg class="w-4 h-4 text-accent-gold" fill="none" stroke="currentColor" stroke-width="2"
                 viewBox="0 0 24 24">
@@ -678,7 +1670,7 @@
               </svg>
               <span>sovbidrahul@gmail.com</span>
             </a>
-            <a class="px-6 py-3 bg-white border border-outline-variant hover:border-primary text-primary font-mono text-[0.75rem] uppercase tracking-widest transition-colors flex items-center gap-2 shadow-sm"
+            <a class="px-7 py-3.5 bg-white border border-outline-variant hover:border-primary text-primary font-mono text-xs uppercase tracking-widest transition-colors flex items-center gap-2 shadow-sm"
               href="tel:+917004272985">
               <svg class="w-4 h-4 text-accent-gold" fill="none" stroke="currentColor" stroke-width="2"
                 viewBox="0 0 24 24">
@@ -698,15 +1690,102 @@
   <!-- FOOTER -->
   <footer class="w-full bg-white border-t border-outline-variant py-8">
     <div
-      class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col sm:flex-row items-center justify-between gap-4 font-mono text-[0.75rem] text-outline uppercase">
-      <div>Bidyawant Pradhan // All Rights Reserved</div>
-      <a class="text-primary hover:text-accent-gold transition-colors"
-        href="mailto:sovbidrahul@gmail.com">sovbidrahul@gmail.com</a>
+      class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col sm:flex-row items-center justify-between gap-4 font-mono text-xs text-outline uppercase">
+      <div>Bidyawant Pradhan // Creative Producer &amp; Director</div>
+      <div class="flex items-center gap-6">
+        <a class="hover:text-primary transition-colors" href="mailto:sovbidrahul@gmail.com">sovbidrahul@gmail.com</a>
+        <a class="hover:text-primary transition-colors" href="tel:+917004272985">+91 70042 72985</a>
+      </div>
     </div>
   </footer>
 
-  <!-- GSAP REVEAL ANIMATIONS SCRIPT -->
+  <!-- CINEMA VIDEO & IMAGE MODAL -->
+  <div id="mediaModal"
+    class="fixed inset-0 z-[100] bg-black/95 backdrop-blur-md hidden items-center justify-center p-4 sm:p-8 transition-opacity duration-300">
+    <div
+      class="relative w-full max-w-5xl bg-neutral-950 border border-neutral-800 shadow-2xl flex flex-col overflow-hidden">
+      <!-- Modal Header -->
+      <div class="flex items-center justify-between px-4 py-3 bg-neutral-900 border-b border-neutral-800">
+        <span id="modalTitle"
+          class="font-display text-sm sm:text-base font-bold text-white uppercase tracking-wider truncate mr-3">Media
+          Player</span>
+        <div class="flex items-center gap-3 shrink-0">
+          <div id="ytActionSlot"></div>
+          <button onclick="closeMediaModal()"
+            class="text-neutral-400 hover:text-white p-1 transition-colors flex items-center gap-1 font-mono text-xs">
+            <span>CLOSE</span>
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Modal Content Area -->
+      <div id="modalBody" class="w-full aspect-video bg-black flex items-center justify-center overflow-hidden">
+        <!-- Injected via JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- SCRIPT FOR MODALS & GSAP ANIMATIONS -->
   <script>
+    const mediaModal = document.getElementById('mediaModal');
+    const modalBody = document.getElementById('modalBody');
+    const modalTitle = document.getElementById('modalTitle');
+    const ytActionSlot = document.getElementById('ytActionSlot');
+
+    function openVideoModal(type, src, title) {
+      modalTitle.innerText = title;
+      if (type === 'yt') {
+        const ytId = src;
+        if (ytActionSlot) {
+          ytActionSlot.innerHTML = `<a href="https://www.youtube.com/watch?v=${ytId}" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center gap-1.5 px-2.5 py-1 text-[0.7rem] font-mono uppercase tracking-wider text-accent-gold border border-accent-gold/50 hover:bg-accent-gold hover:text-black transition-colors"><span>Watch on YouTube</span> ↗</a>`;
+        }
+        modalBody.innerHTML = `<iframe class="w-full h-full" src="https://www.youtube.com/embed/${ytId}?autoplay=1&rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`;
+      } else if (type === 'local') {
+        if (ytActionSlot) {
+          ytActionSlot.innerHTML = `<span class="hidden sm:inline-block px-2.5 py-0.5 text-[0.65rem] font-mono uppercase tracking-wider bg-neutral-800 text-neutral-300 border border-neutral-700">1080p HD Master</span>`;
+        }
+        modalBody.innerHTML = `<video controls autoplay playsinline class="w-full h-full object-contain bg-black"><source src="${src}" type="video/mp4">Your browser does not support the video tag.</video>`;
+      }
+      mediaModal.classList.remove('hidden');
+      mediaModal.classList.add('flex');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function openImageModal(src, title) {
+      modalTitle.innerText = title;
+      if (ytActionSlot) ytActionSlot.innerHTML = '';
+      modalBody.innerHTML = `<div class="w-full h-full flex items-center justify-center p-4"><img src="${src}" alt="${title}" class="max-h-[80vh] max-w-full object-contain shadow-2xl"></div>`;
+      mediaModal.classList.remove('hidden');
+      mediaModal.classList.add('flex');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeMediaModal() {
+      modalBody.innerHTML = '';
+      if (ytActionSlot) ytActionSlot.innerHTML = '';
+      mediaModal.classList.add('hidden');
+      mediaModal.classList.remove('flex');
+      document.body.style.overflow = 'auto';
+    }
+
+    // Close on click outside modal container
+    mediaModal.addEventListener('click', (e) => {
+      if (e.target === mediaModal) {
+        closeMediaModal();
+      }
+    });
+
+    // Close on escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !mediaModal.classList.contains('hidden')) {
+        closeMediaModal();
+      }
+    });
+
+    // GSAP REVEAL ANIMATIONS
     document.addEventListener('DOMContentLoaded', () => {
       gsap.registerPlugin(ScrollTrigger);
 
@@ -750,12 +1829,12 @@
         gsap.from(row, {
           scrollTrigger: {
             trigger: row,
-            start: 'top 92%'
+            start: 'top 94%'
           },
           opacity: 0,
           x: -30,
           duration: 0.6,
-          delay: (i % 4) * 0.1,
+          delay: (i % 4) * 0.08,
           ease: 'power2.out'
         });
       });
