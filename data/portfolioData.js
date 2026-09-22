@@ -138,7 +138,7 @@ const portfolioData = {
       id: "operation-parindey",
       film: "OPERATION PARINDEY (2020)",
       part: "",
-      role: "CONTENT PRODUCER",
+      role: "VIDEOGRAPHY",
       title: "MAKING OF OPERATION PARINDEY",
       talent: "Amit Sadh • Rahul Dev • Sanjay Gadhvi",
       badge: "ZEE5 Original BTS",
@@ -152,7 +152,7 @@ const portfolioData = {
       id: "mard-ko-dard",
       film: "MARD KO DARD NAHI HOTA",
       part: "",
-      role: "CONTENT PRODUCER / AP",
+      role: "VIDEO PRODUCER",
       title: "JIMMY VS. MANI (ACTION BTS)",
       talent: "Abhimanyu Dassani • Gulshan Devaiah • Vasan Bala",
       badge: "RSVP • 1080p HD",
@@ -166,7 +166,7 @@ const portfolioData = {
       id: "chasani",
       film: "CHASANI (2019)",
       part: "",
-      role: "ASSOCIATE PRODUCER",
+      role: "VIDEO PRODUCER",
       title: "CHASANI — MITHOO MITHOO",
       talent: "Manoj Joshi • Sejal Shah • Divyang Thakkar",
       badge: "Feature Film Song",
@@ -180,7 +180,7 @@ const portfolioData = {
       id: "paltan",
       film: "PALTAN (2018)",
       part: "",
-      role: "CONTENT PRODUCER",
+      role: "VIDEO PRODUCER",
       title: "MAKING OF PALTAN",
       talent: "Jackie Shroff • Arjun Rampal • Sonu Sood",
       badge: "Ladakh Shoot BTS",
@@ -196,7 +196,7 @@ const portfolioData = {
     {
       id: "croma",
       brand: "CROMA (TATA)",
-      role: "PRODUCER / DIRECTOR",
+      role: "CREATIVE PRODUCER",
       title: "CROMA — WITH YOU FOR A LIFETIME",
       subtitle: "National TV & Digital Ad Campaign",
       badge: "",
@@ -209,7 +209,7 @@ const portfolioData = {
     {
       id: "fevicol",
       brand: "FEVICOL (PIDILITE)",
-      role: "ASSISTANT DIRECTOR",
+      role: "CREATIVE PRODUCER",
       title: "FEVICOL MARINE WATERPROOF",
       subtitle: "Iconic Pidilite Humor TVC",
       badge: "",
@@ -222,7 +222,7 @@ const portfolioData = {
     {
       id: "loreal",
       brand: "L'ORÉAL PARIS",
-      role: "CREATIVE DIRECTOR",
+      role: "CREATIVE PRODUCER",
       title: "L'ORÉAL — REVITALIFT CRYSTAL",
       subtitle: "National Campaign Direction",
       badge: "",
@@ -231,6 +231,45 @@ const portfolioData = {
       thumbnail: "https://img.youtube.com/vi/vvV_zTy5We8/hqdefault.jpg",
       actionLabel: "Play Commercial",
       client: "L'Oréal"
+    },
+    {
+      id: "fevikwik-pheko",
+      brand: "FEVIKWIK (PIDILITE)",
+      role: "CREATIVE PRODUCER",
+      title: "FEVIKWIK — PHEKO NAHI JODO",
+      subtitle: "Iconic Kabadiwali TVC Campaign",
+      badge: "",
+      videoType: "yt",
+      src: "CcfZqA_R7Tc",
+      thumbnail: "https://img.youtube.com/vi/CcfZqA_R7Tc/hqdefault.jpg",
+      actionLabel: "Play Commercial",
+      client: "Pidilite"
+    },
+    {
+      id: "flipkart-india",
+      brand: "FLIPKART",
+      role: "CREATIVE PRODUCER",
+      title: "FLIPKART — INDIA CHAHE JO HUM BANAYE WOH",
+      subtitle: "National Brand TVC Campaign",
+      badge: "",
+      videoType: "yt",
+      src: "Bhe78nTm258",
+      thumbnail: "https://img.youtube.com/vi/Bhe78nTm258/hqdefault.jpg",
+      actionLabel: "Play Commercial",
+      client: "Flipkart"
+    },
+    {
+      id: "health-insurance",
+      brand: "HEALTH INSURANCE",
+      role: "CREATIVE PRODUCER",
+      title: "HEALTH INSURANCE TVC",
+      subtitle: "National Brand Awareness Campaign",
+      badge: "",
+      videoType: "yt",
+      src: "MCViu8Itm0E",
+      thumbnail: "https://img.youtube.com/vi/MCViu8Itm0E/hqdefault.jpg",
+      actionLabel: "Play Commercial",
+      client: "Health Insurance"
     }
   ],
 
@@ -273,7 +312,7 @@ const portfolioData = {
       title: "NETFLIX — CONCEPT PROMO",
       subtitle: "Synthetic Cinema Direction",
       videoType: "local",
-      src: "AI%20Work/Netflix%20AD.MP4"
+      src: "https://ik.imagekit.io/bidya/ai-ads/Netflix%20AD.MP4"
     },
     {
       id: "snickers-spec",
@@ -282,7 +321,7 @@ const portfolioData = {
       title: "SNICKERS — AI AD FILM",
       subtitle: "Generative Motion Narrative",
       videoType: "local",
-      src: "AI%20Work/snickers%20ad.mp4"
+      src: "https://ik.imagekit.io/bidya/ai-ads/snickers%20ad.mp4"
     },
     {
       id: "commercial-spec",
@@ -291,7 +330,7 @@ const portfolioData = {
       title: "AI BRAND COMMERCIAL",
       subtitle: "Midjourney • Runway Gen-3",
       videoType: "local",
-      src: "AI%20Work/Commercial.mp4"
+      src: "https://ik.imagekit.io/bidya/ai-ads/Commercial.mp4"
     }
   ],
 
@@ -352,70 +391,70 @@ const portfolioData = {
     {
       index: "01",
       title: "SINGLEHOOD (TV SERIES)",
-      studio: "Watcho / Dish TV Original Show",
+      imdb: "https://www.watcho.com/tvshow/singlehood-1",
       scope: "Original Web Series • Multi-Camera",
-      role: "Producer & Creative Director"
+      role: "Web Series"
     },
     {
       index: "02",
       title: "RAID (2018)",
-      studio: "T-Series • Rs. 290 Cr Box Office",
+      imdb: "https://www.imdb.com/title/tt7363076/",
       scope: "Ajay Devgn • Ileana D'Cruz",
-      role: "Content Producer / EPK"
+      role: "Content Producer"
     },
     {
       index: "03",
       title: "BHUJ: THE PRIDE OF INDIA (2021)",
-      studio: "Disney+ Hotstar • T-Series",
+      imdb: "https://www.imdb.com/title/tt9860690/",
       scope: "Ajay Devgn, Sanjay Dutt, Sonakshi Sinha",
-      role: "Content Producer / EPK"
+      role: "Content Producer"
     },
     {
       index: "04",
       title: "INDIA'S MOST WANTED (2019)",
-      studio: "Fox Star Studios • Raj Kumar Gupta",
+      imdb: "https://www.imdb.com/title/tt8439282/",
       scope: "Arjun Kapoor",
-      role: "Lead Content Producer"
+      role: "Content Producer"
     },
     {
       index: "05",
       title: "MARD KO DARD NAHI HOTA (2018)",
-      studio: "RSVP Movies • TIFF Midnight Madness Winner",
+      imdb: "https://www.imdb.com/title/tt7053076/",
       scope: "Abhimanyu Dassani, Radhika Madan",
-      role: "Content Producer"
+      role: "Video Producer"
     },
     {
       index: "06",
       title: "PALTAN (2018)",
-      studio: "J.P. Dutta Films • Zee Music",
+      imdb: "https://www.imdb.com/title/tt7146860/",
       scope: "Jackie Shroff, Arjun Rampal, Sonu Sood",
-      role: "Content Producer"
+      role: "Video Producer"
     },
     {
       index: "07",
       title: "OPERATION PARINDEY (2020)",
-      studio: "ZEE5 Original Feature Film",
+      imdb: "https://www.imdb.com/title/tt11822998/",
       scope: "Amit Sadh, Rahul Dev • Sanjay Gadhvi",
-      role: "Content Producer"
+      role: "Videography"
     },
     {
       index: "08",
       title: "CHASANI (2019)",
-      studio: "Gujarati Feature Film",
+      imdb: "https://www.imdb.com/title/tt10582030/",
       scope: "Manoj Joshi, Sejal Shah",
-      role: "Associate Producer"
+      role: "Video Producer"
     },
     {
       index: "09",
       title: "WOH BHI DIN THE",
-      studio: "JA Entertainment (John Abraham) • Rel. 2024",
+      imdb: "https://www.imdb.com/title/tt31885627/",
       scope: "Rohit Saraf, Adarsh Gourav, Sanjana Sanghi",
       role: "Assistant Director"
     },
     {
       index: "10",
       title: "BADE ACCHE LAGTE HAI & TVCS",
-      studio: "Sony TV • National Commercials (2013–2016)",
+      imdb: "https://www.imdb.com/title/tt2004245/",
       scope: "Balaji Telefilms / National Broadcast",
       role: "Assistant Director"
     }
