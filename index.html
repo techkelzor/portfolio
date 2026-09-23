@@ -650,12 +650,12 @@
                 <span class="text-primary font-bold">${item.film} ${item.part ? `&bull; ${item.part}` : ''}</span>
                 <span class="text-accent-gold font-bold">${item.role}</span>
               </div>
-              <div class="relative w-full aspect-video bg-black group cursor-pointer"
+              <div class="relative w-full aspect-video bg-black group cursor-pointer overflow-hidden"
                 onclick="openVideoModal('${item.videoType}', '${item.src}', '${escapedTitle}')">
                 ${item.thumbnail ? `
-                  <img src="${item.thumbnail}" alt="${item.title}" class="w-full h-full object-cover">
+                  <img src="${item.thumbnail}" alt="${item.title}" class="absolute inset-0 w-full h-full object-cover">
                 ` : `
-                  <video muted playsinline class="w-full h-full object-cover">
+                  <video muted playsinline class="absolute inset-0 w-full h-full object-cover">
                     <source src="${item.src}" type="video/mp4">
                   </video>
                 `}
@@ -704,12 +704,12 @@
                 <span class="text-primary font-bold">${item.brand}</span>
                 <span class="text-accent-gold uppercase font-bold">${item.role}</span>
               </div>
-              <div class="relative w-full aspect-video bg-black group cursor-pointer"
+              <div class="relative w-full aspect-video bg-black group cursor-pointer overflow-hidden"
                 onclick="openVideoModal('${item.videoType}', '${item.src}', '${escapedTitle}')">
                 ${item.thumbnail ? `
-                  <img src="${item.thumbnail}" alt="${item.title}" class="w-full h-full object-cover">
+                  <img src="${item.thumbnail}" alt="${item.title}" class="absolute inset-0 w-full h-full object-cover">
                 ` : `
-                  <video muted playsinline class="w-full h-full object-cover">
+                  <video muted playsinline class="absolute inset-0 w-full h-full object-cover">
                     <source src="${item.src}" type="video/mp4">
                   </video>
                 `}
@@ -758,12 +758,11 @@
                 <span class="text-primary font-bold">${item.brand}</span>
                 <span class="text-accent-gold font-bold">${item.role}</span>
               </div>
-              <div class="relative w-full aspect-[16/9] bg-black group cursor-pointer"
+              <div class="relative w-full aspect-video bg-black group cursor-pointer overflow-hidden"
                 onclick="openVideoModal('${item.videoType}', '${item.src}', '${escapedTitle}')">
-                <video muted playsinline loop autoplay class="w-full h-full object-cover object-[100%_30%]">
+                <video muted playsinline loop autoplay class="absolute inset-0 w-full h-full object-cover object-center">
                   <source src="${item.src}" type="video/mp4">
                 </video>
-                
               </div>
               <div class="p-3.5 bg-white">
                 <div class="font-display text-[0.95rem] uppercase text-primary font-extrabold">${item.title}</div>
