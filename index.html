@@ -399,7 +399,7 @@
             </div>
             <div>
               <h2 class="font-display text-[1.15rem] uppercase font-semibold text-primary tracking-tight font-mono">
-                Creative Producer / Assitant Director / Creative Director
+                Creative Producer / Assistant Director / Creative Director
               </h2>
             </div>
           </div>
@@ -472,9 +472,11 @@
 
   <!-- CINEMA VIDEO & IMAGE MODAL -->
   <div id="mediaModal"
-    class="fixed inset-0 z-[100] bg-black/95 backdrop-blur-md hidden items-center justify-center p-4 sm:p-8 transition-opacity duration-300">
-    <div
-      class="relative w-full max-w-5xl bg-neutral-950 border border-neutral-800 shadow-2xl flex flex-col overflow-hidden">
+    class="fixed inset-0 z-[100] bg-black/90 backdrop-blur-xl hidden items-center justify-center p-4 sm:p-8 transition-opacity duration-300">
+    
+    <!-- Cinema Video Player Box -->
+    <div id="videoModalContainer"
+      class="relative w-full max-w-5xl bg-neutral-950 border border-neutral-800 shadow-2xl flex-col overflow-hidden hidden">
       <!-- Modal Header -->
       <div class="flex items-center justify-between px-4 py-3 bg-neutral-900 border-b border-neutral-800">
         <span id="modalTitle"
@@ -483,7 +485,7 @@
         <div class="flex items-center gap-3 shrink-0">
           <div id="ytActionSlot"></div>
           <button onclick="closeMediaModal()"
-            class="text-neutral-400 hover:text-white p-1 transition-colors flex items-center gap-1 font-mono text-xs">
+            class="text-neutral-400 hover:text-white p-1 transition-colors flex items-center gap-1 font-mono text-xs cursor-pointer">
             <span>CLOSE</span>
             <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
               <path d="M6 18L18 6M6 6l12 12" />
@@ -494,6 +496,21 @@
 
       <!-- Modal Content Area -->
       <div id="modalBody" class="w-full aspect-video bg-black flex items-center justify-center overflow-hidden">
+        <!-- Injected via JavaScript -->
+      </div>
+    </div>
+
+    <!-- Image Lightbox (Blur Background with only Image) -->
+    <div id="imageModalContainer" class="relative max-w-[95vw] max-h-[95vh] hidden items-center justify-center">
+      <button onclick="closeMediaModal()"
+        class="fixed top-4 right-4 sm:top-6 sm:right-6 text-white/80 hover:text-white bg-black/60 hover:bg-black/90 backdrop-blur-md rounded-full p-2.5 transition-all z-50 border border-white/20 shadow-2xl cursor-pointer flex items-center gap-1.5 font-mono text-xs"
+        aria-label="Close image">
+        <span class="hidden sm:inline">CLOSE</span>
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+      <div id="imageModalBody" class="flex items-center justify-center">
         <!-- Injected via JavaScript -->
       </div>
     </div>
@@ -779,8 +796,8 @@
         postersEl.innerHTML = portfolioData.posters.map(item => {
           const imageSrc = item.thumbnail || item.src;
           return `
-            <div class="break-inside-avoid relative group overflow-hidden border border-outline-variant bg-neutral-900 reveal-card shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer"
-              onclick="openImageModal('${item.src}', 'Film Poster & Key Art')">
+            <div class="break-inside-avoid relative group overflow-hidden border border-outline-variant bg-transparent reveal-card shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer"
+              onclick="openImageModal('${item.src}', '')">
               <img src="${imageSrc}" alt="Film Poster"
                 class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500">
             </div>
@@ -832,11 +849,20 @@
     // 2. MODAL CONTROLLER (Cinema Video & High-Res Image Player)
     // -------------------------------------------------------------
     const mediaModal = document.getElementById('mediaModal');
+    const videoModalContainer = document.getElementById('videoModalContainer');
+    const imageModalContainer = document.getElementById('imageModalContainer');
     const modalBody = document.getElementById('modalBody');
+    const imageModalBody = document.getElementById('imageModalBody');
     const modalTitle = document.getElementById('modalTitle');
     const ytActionSlot = document.getElementById('ytActionSlot');
 
     function openVideoModal(type, src, title) {
+      if (imageModalContainer) {
+        imageModalContainer.classList.add('hidden');
+        imageModalContainer.classList.remove('flex');
+      }
+      if (imageModalBody) imageModalBody.innerHTML = '';
+
       modalTitle.innerText = title;
       if (type === 'yt') {
         const ytId = src;
@@ -850,23 +876,51 @@
         }
         modalBody.innerHTML = `<video controls autoplay playsinline class="w-full h-full object-contain bg-black"><source src="${src}" type="video/mp4">Your browser does not support the video tag.</video>`;
       }
+      if (videoModalContainer) {
+        videoModalContainer.classList.remove('hidden');
+        videoModalContainer.classList.add('flex');
+      }
       mediaModal.classList.remove('hidden');
       mediaModal.classList.add('flex');
       document.body.style.overflow = 'hidden';
     }
 
     function openImageModal(src, title) {
-      modalTitle.innerText = title;
+      if (videoModalContainer) {
+        videoModalContainer.classList.add('hidden');
+        videoModalContainer.classList.remove('flex');
+      }
+      if (modalBody) modalBody.innerHTML = '';
       if (ytActionSlot) ytActionSlot.innerHTML = '';
-      modalBody.innerHTML = `<div class="w-full h-full flex items-center justify-center p-4"><img src="${src}" alt="${title}" class="max-h-[80vh] max-w-full object-contain shadow-2xl"></div>`;
+
+      if (imageModalBody) {
+        imageModalBody.innerHTML = `
+          <img src="${src}" alt="${title || 'Poster'}" 
+            class="max-h-[88vh] max-w-[92vw] object-contain rounded-md shadow-2xl select-none"
+            onclick="event.stopPropagation()">
+        `;
+      }
+      if (imageModalContainer) {
+        imageModalContainer.classList.remove('hidden');
+        imageModalContainer.classList.add('flex');
+      }
       mediaModal.classList.remove('hidden');
       mediaModal.classList.add('flex');
       document.body.style.overflow = 'hidden';
     }
 
     function closeMediaModal() {
-      modalBody.innerHTML = '';
+      if (modalBody) modalBody.innerHTML = '';
+      if (imageModalBody) imageModalBody.innerHTML = '';
       if (ytActionSlot) ytActionSlot.innerHTML = '';
+      if (videoModalContainer) {
+        videoModalContainer.classList.add('hidden');
+        videoModalContainer.classList.remove('flex');
+      }
+      if (imageModalContainer) {
+        imageModalContainer.classList.add('hidden');
+        imageModalContainer.classList.remove('flex');
+      }
       mediaModal.classList.add('hidden');
       mediaModal.classList.remove('flex');
       document.body.style.overflow = 'auto';
@@ -874,7 +928,7 @@
 
     // Close on backdrop click
     mediaModal.addEventListener('click', (e) => {
-      if (e.target === mediaModal) {
+      if (e.target === mediaModal || e.target === imageModalContainer || e.target === imageModalBody) {
         closeMediaModal();
       }
     });
