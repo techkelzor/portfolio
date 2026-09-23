@@ -59,7 +59,9 @@ const portfolioData = {
           text: "Embedded cutting-edge AI video generators (Runway, Pika, HeyGen) & VR workflows directly into the production lifecycle."
         }
       ],
-      benchmark: "100% On-Time • Zero Overrun"
+      benchmark: "100% On-Time • Zero Overrun",
+      websiteUrl: "https://dokodemodoors.com/en/",
+      websiteLabel: "dokodemodoors.com"
     }
   },
 
