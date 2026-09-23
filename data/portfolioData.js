@@ -7,7 +7,7 @@ const portfolioData = {
   profile: {
     name: "Bidyawant Pradhan",
     title: "Creative Producer & Director",
-    subtitles: ["Creative Producer", "Creative Director", "Content Producer"],
+    subtitles: ["Video Producer", "Creative Director", "Content Producer"],
     heroBadge: "4 Yrs Tokyo Corporate • 40+ Global Projects • 7 Feature Films",
     bio: "12+ years spanning theatrical feature film BTS (Raid, Bhuj, Mard Ko Dard Nahi Hota), Tokyo corporate direction (Matrix Inc.), national brand ad films (L'Oréal, Croma, Fevicol, Tanishq), and OTT series production (Singlehood).",
     email: "sovbidrahul@gmail.com",
@@ -17,7 +17,7 @@ const portfolioData = {
       { label: "12+ YEARS EXP", icon: "★", highlight: true },
       { value: "40+", label: "PROJECTS", highlight: false },
       { value: "26", label: "COUNTRIES", highlight: false },
-      { value: "8", label: "FEATURE FILMS", highlight: true }
+      { value: "8", label: "8 FEATURE FILMS", highlight: true }
     ]
   },
 
@@ -124,7 +124,7 @@ const portfolioData = {
       id: "nit-khair-manga",
       film: "RAID",
       part: "NIT KHAIR MANGA",
-      role: "SONG MAKING / BTS",
+      role: "CONTENT PRODUCER",
       title: "NIT KHAIR MANGA (MAKING)",
       talent: "Rahat Fateh Ali Khan • Ajay Devgn • Ileana",
       badge: "Song Making",
@@ -222,7 +222,7 @@ const portfolioData = {
     {
       id: "loreal",
       brand: "L'ORÉAL PARIS",
-      role: "CREATIVE PRODUCER",
+      role: "Assistant Director",
       title: "L'ORÉAL — REVITALIFT CRYSTAL",
       subtitle: "National Campaign Direction",
       badge: "",
@@ -235,7 +235,7 @@ const portfolioData = {
     {
       id: "fevikwik-pheko",
       brand: "FEVIKWIK (PIDILITE)",
-      role: "CREATIVE PRODUCER",
+      role: "CREATIVE DIRECTOR",
       title: "FEVIKWIK — PHEKO NAHI JODO",
       subtitle: "Iconic Kabadiwali TVC Campaign",
       badge: "",
@@ -391,7 +391,7 @@ const portfolioData = {
     {
       index: "01",
       title: "SINGLEHOOD (TV SERIES)",
-      imdb: "https://www.watcho.com/tvshow/singlehood-1",
+      imdb: "https://www.imdb.com/title/tt16088370/",
       scope: "Original Web Series • Multi-Camera",
       role: "Web Series"
     },
