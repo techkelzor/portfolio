@@ -370,6 +370,14 @@
             <div>
               <h2 class="font-display text-[2.25rem] uppercase text-primary tracking-tight font-extrabold">
                 JAPAN
+                <a href="https://dokodemodoors.com/en/" target="_blank" rel="noopener noreferrer"
+                  class="inline-flex items-center gap-1.5 font-mono text-xs uppercase tracking-wider text-black underline hover:text-accent-gold font-bold transition-colors ml-2">
+                  <span>dokodemodoors.com</span>
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                  </svg>
+                </a>
+
               </h2>
             </div>
             <div>
@@ -636,15 +644,7 @@
                   <h3 class="font-display text-2xl sm:text-3xl uppercase font-black text-white mt-1">${m.company}</h3>
                   <div class="font-mono text-xs text-accent-gold uppercase mt-1.5 font-semibold">${m.role}</div>
                 </div>
-                 ${m.websiteUrl ? `
-                <a href="${m.websiteUrl}" target="_blank" rel="noopener noreferrer"
-                  class="inline-flex items-center gap-1.5 font-mono text-xs uppercase tracking-wider text-white underline hover:text-accent-gold font-bold transition-colors">
-                  <span>${m.websiteLabel || 'dokodemodoors.com'}</span>
-                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                    <path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
-                  </svg>
-                </a>
-                ` : ''}
+                 
               </div>
               
             </div>
