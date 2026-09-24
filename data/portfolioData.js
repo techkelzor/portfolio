@@ -9,12 +9,12 @@ const portfolioData = {
     title: "Creative Producer & Director",
     subtitles: ["Video Producer", "Creative Director", "Content Producer"],
     heroBadge: "4 Yrs Tokyo Corporate • 40+ Global Projects • 7 Feature Films",
-    bio: "12+ years spanning theatrical feature film BTS (Raid, Bhuj, Mard Ko Dard Nahi Hota), Tokyo corporate direction (Matrix Inc.), national brand ad films (L'Oréal, Croma, Fevicol, Tanishq), and OTT series production (Singlehood).",
+    bio: "13+ years spanning theatrical feature film BTS (Raid, Bhuj, Mard Ko Dard Nahi Hota), Tokyo corporate direction (Matrix Inc.), national brand ad films (L'Oréal, Croma, Fevicol, Tanishq), and OTT series production (Singlehood).",
     email: "sovbidrahul@gmail.com",
     phone: "+91 70042 72985",
     locations: ["Bangalore, India", "Tokyo, Japan", "Worldwide"],
     stats: [
-      { label: "12+ YEARS EXP", icon: "★", highlight: true },
+      { label: "13+ YEARS EXP", icon: "★", highlight: true },
       { value: "40+", label: "PROJECTS", highlight: false },
       { value: "26", label: "COUNTRIES", highlight: false },
       { value: "8", label: "8 FEATURE FILMS", highlight: true }
