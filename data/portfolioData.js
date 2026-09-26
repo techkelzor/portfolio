@@ -314,7 +314,7 @@ const portfolioData = {
       title: "NETFLIX — CONCEPT PROMO",
       subtitle: "Synthetic Cinema Direction",
       videoType: "local",
-      src: "https://ik.imagekit.io/bidya/ai-ads/Netflix%20AD.MP4"
+      src: "Netflix%20AD.MP4"
     },
     {
       id: "snickers-spec",
@@ -323,7 +323,7 @@ const portfolioData = {
       title: "SNICKERS — AI AD FILM",
       subtitle: "Generative Motion Narrative",
       videoType: "local",
-      src: "https://ik.imagekit.io/bidya/ai-ads/snickers%20ad.mp4"
+      src: "snickers%20ad.mp4"
     },
     {
       id: "commercial-spec",
@@ -332,7 +332,7 @@ const portfolioData = {
       title: "AI BRAND COMMERCIAL",
       subtitle: "Midjourney • Runway Gen-3",
       videoType: "local",
-      src: "https://ik.imagekit.io/bidya/ai-ads/Commercial.mp4"
+      src: "Commercial.mp4"
     }
   ],
 
