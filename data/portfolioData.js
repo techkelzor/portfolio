@@ -313,8 +313,9 @@ const portfolioData = {
       role: "VIDEO PRODUCER",
       title: "NETFLIX — CONCEPT PROMO",
       subtitle: "Synthetic Cinema Direction",
+      aspect: "16:9",
       videoType: "local",
-      src: "https://ik.imagekit.io/bidya/ai-ads/Netflix%20AD.MP4"
+      src: "Netflix%20AD.MP4"
     },
     {
       id: "snickers-spec",
@@ -322,8 +323,9 @@ const portfolioData = {
       role: "VIDEO PRODUCER",
       title: "SNICKERS — AI AD FILM",
       subtitle: "Generative Motion Narrative",
+      aspect: "16:9",
       videoType: "local",
-      src: "https://ik.imagekit.io/bidya/ai-ads/snickers%20ad.mp4"
+      src: "snickers%20ad.mp4"
     },
     {
       id: "commercial-spec",
@@ -331,8 +333,69 @@ const portfolioData = {
       role: "VIDEO PRODUCER",
       title: "AI BRAND COMMERCIAL",
       subtitle: "Midjourney • Runway Gen-3",
+      aspect: "16:9",
       videoType: "local",
-      src: "https://ik.imagekit.io/bidya/ai-ads/Commercial.mp4"
+      src: "Commercial.mp4"
+    },
+    {
+      id: "ai-drive-1",
+      aspect: "9:16",
+      videoType: "drive",
+      src: "https://drive.google.com/file/d/13HUbZUHP86QVk9jC4H63C67CsRpcj-CA/preview"
+    },
+    {
+      id: "ai-drive-2",
+      aspect: "9:16",
+      videoType: "drive",
+      src: "https://drive.google.com/file/d/1yMDCfjhytiqZ4TglJ6Jf8vvmLGjC0DWP/preview"
+    },
+    {
+      id: "ai-drive-3",
+      aspect: "9:16",
+      videoType: "drive",
+      src: "https://drive.google.com/file/d/1l-tiKcvUZfcYKNm7g-t9_0xQuGl5-l5v/preview"
+    },
+    {
+      id: "ai-drive-4",
+      aspect: "9:16",
+      videoType: "drive",
+      src: "https://drive.google.com/file/d/16UGT7fH07EaFBAt76AHMPoDgI_bpJZQW/preview"
+    },
+    {
+      id: "ai-drive-5",
+      aspect: "9:16",
+      videoType: "drive",
+      src: "https://drive.google.com/file/d/1xjuMqHNefP7F7HxwSePZL_s1bUUYoTwD/preview"
+    },
+    {
+      id: "ai-drive-6",
+      aspect: "9:16",
+      videoType: "drive",
+      src: "https://drive.google.com/file/d/1cJI4AVLgNdc6EacfzTh8Bnj6e5BNCyir/preview"
+    },
+    {
+      id: "ai-drive-7",
+      aspect: "9:16",
+      videoType: "drive",
+      src: "https://drive.google.com/file/d/1_RHSofWsGT4kthVTne3shBVjAn4LS-5l/preview"
+    },
+    {
+      id: "ai-drive-8",
+      aspect: "9:16",
+      videoType: "drive",
+      src: "https://drive.google.com/file/d/1c1FRh1YwKsyOpF-W2O9ts-ZRjef3LONn/preview"
+    },
+    {
+      id: "ai-drive-9",
+      aspect: "9:16",
+      videoType: "drive",
+      src: "https://drive.google.com/file/d/11PChD2rJ6aPeWJe8BqAeFOY72YZtgWoI/preview"
+    },
+    {
+      id: "ai-drive-10",
+      aspect: "9:16",
+      videoType: "drive",
+      src: "https://drive.google.com/file/d/1PHLj0Ugoda3aLo-sEymaUkH8oOsw7RY_/preview"
     }
   ],
 

@@ -65,6 +65,10 @@
       transform: translateY(-4px);
       box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
     }
+
+    .aspect-vertical-reel {
+      aspect-ratio: 9 / 16;
+    }
   </style>
 
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
@@ -305,7 +309,7 @@
           </div>
 
           <!-- Dynamically Mapped AI Work Grid -->
-          <div id="aiGrid" class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div id="aiGrid" class="flex flex-col gap-10">
             <!-- Rendered via portfolioData.aiVideos.map -->
           </div>
         </div>
@@ -773,30 +777,67 @@
         }).join('');
       }
 
-      // Render AI Generated Films Grid
+      // Render AI Generated Films & Vertical 9:16 Reels
       const aiEl = document.getElementById('aiGrid');
       if (aiEl && portfolioData.aiVideos) {
-        aiEl.innerHTML = portfolioData.aiVideos.map(item => {
-          const escapedTitle = (item.title || '').replace(/'/g, "\\'");
-          return `
-            <div class="flex flex-col bg-white border border-outline-variant overflow-hidden video-card-hover reveal-card shadow-sm">
-              <div class="flex justify-between items-center px-3 py-2 border-b border-outline-variant bg-surface-container-low font-mono text-[0.725rem]">
-                <span class="text-primary font-bold">${item.brand}</span>
-                <span class="text-accent-gold font-bold">${item.role}</span>
-              </div>
-              <div class="relative w-full aspect-video bg-black group cursor-pointer overflow-hidden"
-                onclick="openVideoModal('${item.videoType}', '${item.src}', '${escapedTitle}')">
-                <video muted playsinline loop autoplay class="absolute inset-0 w-full h-full object-cover object-[100%_30%]">
-                  <source src="${item.src}" type="video/mp4">
-                </video>
-              </div>
-              <div class="p-3.5 bg-white">
-                <div class="font-display text-[0.95rem] uppercase text-primary font-extrabold">${item.title}</div>
-                <div class="font-mono text-[0.65rem] text-outline uppercase mt-0.5">${item.subtitle}</div>
+        const landscapeFilms = portfolioData.aiVideos.filter(item =>
+          item.aspect === '16:9' || (!item.aspect && (item.brand || item.title || item.videoType === 'local'))
+        );
+        const verticalReels = portfolioData.aiVideos.filter(item =>
+          item.aspect === '9:16' || item.videoType === 'drive' || item.videoType === 'embed' || (!item.brand && !item.title)
+        );
+
+        let html = '';
+
+        if (landscapeFilms.length > 0) {
+          html += `
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              ${landscapeFilms.map(item => {
+            const escapedTitle = (item.title || '').replace(/'/g, "\\'");
+            return `
+                  <div class="flex flex-col bg-white border border-outline-variant overflow-hidden video-card-hover reveal-card shadow-sm">
+                    <div class="flex justify-between items-center px-3 py-2 border-b border-outline-variant bg-surface-container-low font-mono text-[0.725rem]">
+                      <span class="text-primary font-bold">${item.brand}</span>
+                      <span class="text-accent-gold font-bold">${item.role}</span>
+                    </div>
+                    <div class="relative w-full aspect-video bg-black group cursor-pointer overflow-hidden"
+                      onclick="openVideoModal('${item.videoType}', '${item.src}', '${escapedTitle}', '16:9')">
+                      <video muted playsinline loop autoplay class="absolute inset-0 w-full h-full object-cover object-[100%_30%]">
+                        <source src="${item.src}" type="video/mp4">
+                      </video>
+                    </div>
+                    <div class="p-3.5 bg-white">
+                      <div class="font-display text-[0.95rem] uppercase text-primary font-extrabold">${item.title}</div>
+                      <div class="font-mono text-[0.65rem] text-outline uppercase mt-0.5">${item.subtitle}</div>
+                    </div>
+                  </div>
+                `;
+          }).join('')}
+            </div>
+          `;
+        }
+
+        if (verticalReels.length > 0) {
+          html += `
+            <div class="flex flex-col gap-5 pt-6 border-t border-outline-variant">
+              <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+                ${verticalReels.map(item => `
+                  <div class="flex flex-col bg-black border border-outline-variant overflow-hidden video-card-hover reveal-card shadow-sm aspect-vertical-reel relative group">
+                    <iframe
+                      src="${item.src}"
+                      class="absolute inset-0 w-full h-full border-0 aspect-vertical-reel"
+                      allow="autoplay; encrypted-media *"
+                      allowfullscreen
+                      loading="lazy">
+                    </iframe>
+                  </div>
+                `).join('')}
               </div>
             </div>
           `;
-        }).join('');
+        }
+
+        aiEl.innerHTML = html;
       }
 
       // Render Posters Masonry Columns (Picture only)
@@ -865,7 +906,7 @@
     const modalTitle = document.getElementById('modalTitle');
     const ytActionSlot = document.getElementById('ytActionSlot');
 
-    function openVideoModal(type, src, title) {
+    function openVideoModal(type, src, title, aspect = '16:9') {
       if (imageModalContainer) {
         imageModalContainer.classList.add('hidden');
         imageModalContainer.classList.remove('flex');
@@ -873,6 +914,19 @@
       if (imageModalBody) imageModalBody.innerHTML = '';
 
       modalTitle.innerText = title;
+
+      if (aspect === '9:16') {
+        videoModalContainer.classList.remove('max-w-5xl');
+        videoModalContainer.classList.add('max-w-sm', 'sm:max-w-md');
+        modalBody.classList.remove('aspect-video');
+        modalBody.classList.add('aspect-vertical-reel', 'max-h-[82vh]');
+      } else {
+        videoModalContainer.classList.remove('max-w-sm', 'sm:max-w-md');
+        videoModalContainer.classList.add('max-w-5xl');
+        modalBody.classList.remove('aspect-vertical-reel', 'max-h-[82vh]');
+        modalBody.classList.add('aspect-video');
+      }
+
       if (type === 'yt') {
         const ytId = src;
         if (ytActionSlot) {
@@ -884,6 +938,12 @@
           ytActionSlot.innerHTML = `<span class="hidden sm:inline-block px-2.5 py-0.5 text-[0.65rem] font-mono uppercase tracking-wider bg-neutral-800 text-neutral-300 border border-neutral-700">1080p HD Master</span>`;
         }
         modalBody.innerHTML = `<video controls autoplay playsinline class="w-full h-full object-contain bg-black"><source src="${src}" type="video/mp4">Your browser does not support the video tag.</video>`;
+      } else if (type === 'drive' || type === 'embed' || type === 'iframe') {
+        if (ytActionSlot) {
+          const driveLink = src.replace('/preview', '/view');
+          ytActionSlot.innerHTML = `<a href="${driveLink}" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center gap-1.5 px-2.5 py-1 text-[0.7rem] font-mono uppercase tracking-wider text-accent-gold border border-accent-gold/50 hover:bg-accent-gold hover:text-black transition-colors"><span>Open in Drive</span> ↗</a>`;
+        }
+        modalBody.innerHTML = `<iframe class="w-full h-full border-0" src="${src}" allow="autoplay; encrypted-media *" allowfullscreen></iframe>`;
       }
       if (videoModalContainer) {
         videoModalContainer.classList.remove('hidden');
@@ -919,10 +979,16 @@
     }
 
     function closeMediaModal() {
-      if (modalBody) modalBody.innerHTML = '';
+      if (modalBody) {
+        modalBody.innerHTML = '';
+        modalBody.classList.remove('aspect-vertical-reel', 'max-h-[82vh]');
+        modalBody.classList.add('aspect-video');
+      }
       if (imageModalBody) imageModalBody.innerHTML = '';
       if (ytActionSlot) ytActionSlot.innerHTML = '';
       if (videoModalContainer) {
+        videoModalContainer.classList.remove('max-w-sm', 'sm:max-w-md');
+        videoModalContainer.classList.add('max-w-5xl');
         videoModalContainer.classList.add('hidden');
         videoModalContainer.classList.remove('flex');
       }
