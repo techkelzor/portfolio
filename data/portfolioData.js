@@ -355,12 +355,12 @@ const portfolioData = {
       videoType: "drive",
       src: "Works/AI%20Work/5.mp4"
     },
-    // {
-    //   id: "ai-drive-4",
-    //   aspect: "9:16",
-    //   videoType: "drive",
-    //   src: "https://drive.google.com/file/d/16UGT7fH07EaFBAt76AHMPoDgI_bpJZQW/preview"
-    // },
+    {
+      id: "ai-drive-4",
+      aspect: "9:16",
+      videoType: "drive",
+      src: "Works/AI%20Work/6.mp4"
+    },
     // {
     //   id: "ai-drive-5",
     //   aspect: "9:16",
